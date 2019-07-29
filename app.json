@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/second/second",
+		"pages/course/course",
+		"pages/brain/brain",
+		"pages/mine/mine",
+		"pages/lnvitation/lnvitation",
+		"pages/message/message",
+		"pages/confirm/confirm",
+		"pages/orderform/orderform",
+		"pages/my/my",
+		"pages/nlivestreaming/nlivestreaming",
+		"pages/voice/voice",
+		"pages/articleList/articleList",
+		"pages/daka/daka",
+		"pages/xiangqing/xiangqing",
+		"pages/gongkai/gongkai",
+		"pages/artDetail/artDetail",
+		"pages/collect/collect",
+		"pages/foot/foot",
+		"pages/pingjia/pingjia",
+		"pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFD101",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,15 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置全局 -->
+			<view class="overall">
+				请输入VIP服务卡密:
+				<view class="input">
+					<input type="text"  placeholder="请输入邀请码" data-key="vip_code" bindblur="changeBind"  value="{{web_sForm.vip_code}}"/>
+				</view>
+				<!-- 设置点击进入 -->
+				<view class="dianji" bindtap="{{web_buttonCanClick?'submit':''}}">点击进入</view>
+			</view>
+		</view>
+	</view>
+</view>

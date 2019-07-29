@@ -1,0 +1,15 @@
+<view>
+	<view style="display: flex;flex-wrap: wrap;">
+		<view class="card" wx:for="{{web_mainData}}" style="position: relative;" wx:key="id" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing">
+			<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
+			<view class="lucency">
+				{{item.description}}
+			</view>
+			<view class="foot-f-div">
+				<picker class="pickerr">{{item.title}}</picker>
+				<view class="picker-datete">{{item.view_count}}</view>
+				<view class="picker-hp">人已学习</view>
+			</view>
+		</view>
+	</view>
+</view>

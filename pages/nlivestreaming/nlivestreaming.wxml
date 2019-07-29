@@ -1,0 +1,13 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+		<!-- 设置图片 -->
+		<view class="nlivestreaming">
+			<image src="../../image/live-img.png"></image>
+		</view>
+		<view class="wenzi">
+			观看直播课程，请在公众号底部菜单，<span style="color: red;">呱呱直播</span>观看直播
+		</view>
+		</view>
+	</view>
+</view>

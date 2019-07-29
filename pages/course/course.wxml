@@ -1,0 +1,69 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置头部  搜索框-->
+			<view class="course">
+				<view class="course-to">
+					<image src="../../image/home-icon1.png"></image>
+					<input type="text" value="" placeholder="请输入您想要观看的课程" class="in" data-key="title" bindblur="changeBind"  value="{{web_sForm.title}}"/>
+				</view>
+				<view class="course-on" bindtap="goSearch">
+					搜索
+				</view>
+			</view>
+			<!-- 设置第一个div -->
+			<view class="foot">
+				<view class="popularity wwrr" bindtap="changeOrder" data-key="view_count">人气<image src="../../image/course-icon1.png" class="rrww"></image>
+				</view>
+				<view class="evaluate wwrr" bindtap="changeOrder" data-key="score">评价<image src="../../image/course-icon1.png" class="rrww"></image>
+				</view>
+			</view>
+			<!-- 设置第二个div -->
+			<block wx:for="{{web_mainData}}">
+				<view class="foot-f" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
+					<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
+					<view class="lucency">
+						{{item.view_count}}人已学习
+					</view>
+					<view class="foot-f-div">
+						<picker class="picker">{{item.title}}</picker>
+						<view class="picker-date">{{item.score}}%</view>
+						<view class="picker-hp">好评</view>
+					</view>
+				</view>
+			</block>
+			
+			
+			<!-- 设置脚部 -->
+			<view class="navbar">
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+					<view class="nav_img">
+						<image src="../../image/nabar1.png"></image>
+					</view>
+					<view class="text">首页</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/course/course">
+					<view class="nav_img">
+						<image src="../../image/nabar2-a.png"></image>
+					</view>
+					<view class="text this-text">课程</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/brain/brain">
+					<view class="nav_img">
+						<image src="../../image/nabar3.png"></image>
+					</view>
+					<view class="text">智囊团</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
+					<view class="nav_img">
+						<image src="../../image/nabar4.png"></image>
+					</view>
+					<view class="text">我的</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+
+</view>

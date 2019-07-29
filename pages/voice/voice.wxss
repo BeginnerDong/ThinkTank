@@ -1,0 +1,103 @@
+/* 设置全局 */
+.quanju{
+	width: 100%;
+	height: 602px;
+	background-color: #F6F6F6;
+}
+/* 设置背景颜色 */
+.light{
+	width: 100%;
+	height: 105px;
+	background-color: #FFFFFF;
+}
+/* 设置文字信息 */
+.content{
+	width: 50%;
+	height: 10px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.content>view:nth-child(1){
+	width: 2%;
+	height: 4px;
+	background-color: #FF5D0E;
+	border-radius: 50%;
+	position: relative;
+	top: 8px;
+	left: 5px;
+}
+.content>view:nth-child(2){
+	width: 100%;
+	height: 10px;
+	font-size: 11px;
+	color: rgb(102,102,102);
+	margin-left: 15px;
+	margin-top: -3px;
+	
+}
+.content>view:nth-child(3){
+	width: 40%;
+	height: 10px;
+	font-size: 11px;
+	color: rgb(102,102,102);
+	margin-left: 80px;
+	margin-top: -10px;
+}
+/* 设置左部内容 */
+.content-one{
+	width: 20%;
+	height: 59px;
+	margin-left: 21px;
+	margin-top: 14px;
+	border-left: 1px solid #FF5D0E;
+}
+.content-one>view:nth-child(1){
+	width: 55%;
+	height: 40px;
+	margin-left: 16px;
+	margin-top: 6px;
+}
+.content-one>view:nth-child(2){
+	width: 60%;
+	height: 16px;
+	margin-left: 16px;
+	margin-top: 4px;
+	font-size: 11px;
+}
+.content-one>view:nth-child(1)>image{
+	width: 100%;
+	height: 40px;
+}
+/* 设置中间内容 */
+.content-two{
+	width: 60%;
+	height: 69px;
+	margin-left: 85px;
+	margin-top: -56px;
+}
+.content-two>view:nth-child(1){
+	font-size: 13px;
+	color: rgb(34,34,34);
+	width: 90%;
+	height: 48%;
+}
+.content-two>view:nth-child(2)>image{
+	width: 60%;
+	height: 25px;
+}
+.content-two>view:nth-child(2){
+	font-size: 12px;
+	color: rgb(153,153,153);
+	line-height: 41px;
+}
+.san{
+	width: 55%;
+	height: 26px;
+	margin-left: 143px;
+	margin-top: -50px;
+}
+.ishu{
+	width: 10%;
+	height: 12px;
+	padding-left: 35px;
+}

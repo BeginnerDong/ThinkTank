@@ -1,0 +1,54 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<view>
+				<view class='topTabSwiper'>
+					<view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>待领取</view>
+					<view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>待使用</view>
+					<view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>已失效</view>
+				</view>
+
+				<block wx:for="{{web_mainData}}">
+					<view class='swiper_con' wx:if="{{currentData == 0}}">
+						<image src="../../image/coupons-icon3.png"></image>
+						<!-- 设置文字信息 -->
+						<view class="dahezi">
+							<view>￥</view>
+							<view>{{item.value}}</view>
+							<view>优惠券</view>
+							<view>{{item.start_time}}-{{item.end_time}}</view>
+							<view bindtap="couponAdd" data-index="{{index}}">立即领取</view>
+						</view>
+					</view>
+					<view class='swiper_con' wx:if="{{currentData == 1}}">
+						<image src="../../image/coupons-icon3.png"></image>
+						<view class="dahezi">
+							<view>￥</view>
+							<view>{{item.value}}</view>
+							<view>优惠券</view>
+							<view>{{item.create_time}}-{{item.invalid_time}}</view>
+							<view>立即使用</view>
+						</view>
+					</view>
+					<view class='swiper_con' wx:if="{{currentData == 2}}">
+						<image src="../../image/coupons-icon3.png"></image>
+						<view class="dahezi">
+							<view>￥</view>
+							<view>{{item.value}}</view>
+							<view>优惠券</view>
+							<view>{{item.create_time}}-{{item.invalid_time}}</view>
+							<view>已经失效</view>
+							<image src="../../image/coupons-icon2.png" style="width: 45%;position: absolute;top: -27px;right: 93px;height: 147px;"></image>
+						</view>
+					</view>
+				</block>
+				
+
+				
+
+			
+
+			</view>
+		</view>
+	</view>
+</view>

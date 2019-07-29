@@ -1,0 +1,34 @@
+.overall{
+	width: 100%;
+	height: 601px;
+	background-color: #f6f6f6;
+	font-size: 15px;
+	color: #323232;
+	padding-left: 13px;
+}
+.input{
+	background-color: #FFFFFF;
+	width: 92%;
+	height: 53px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.input>input{
+	height: 10px;
+	padding-left: 10px;
+	padding-top: 13px;
+}
+/* 设置点击进入 */
+.dianji{
+	width: 80%;
+	height: 38px;
+	border-radius:50px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 38px;
+	position: absolute;
+	right: 40px;
+	top: 355px;
+	color: #BBBBBB;
+	background: linear-gradient(to right,#ff5d0e,#ffa70e);
+}

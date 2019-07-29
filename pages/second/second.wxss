@@ -1,0 +1,79 @@
+/* 设置第一个div */
+.block{
+	margin-top: 20px;
+	margin-left: 35px;
+	width: 80%;
+	height: 265px;
+	border-radius: 23px;
+}
+.block>image{
+	width: 100%;
+	height: 190px;
+}
+/* 设置里面div */
+.embed{
+	margin-left: 4px;
+	margin-top: -10px;
+	width: 97.5%;
+	height: 80px;
+	border-radius: 0px 0px 23px 23px ;
+	background-color: #f6f6f6;
+}
+.jiaru{
+	width: 70%;
+	height: 45px;
+	font-size: 14px;
+	line-height: 45px;
+	margin-left: 20px;
+}
+.rmb{
+	width: 33%;
+	height: 32px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: red;
+}
+.kait{
+	width: 55px;
+	height: 25px;
+	border-radius: 3px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	right: 28px;
+	top: 40px;
+	color: #FFFFFF;
+	 background: linear-gradient(to right,#ff5d0e,#ffa70e);
+}
+.kaitt{
+	width: 55px;
+	height: 25px;
+	border-radius: 3px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	right: 72px;
+	top: 525px;
+	color: #FFFFFF;
+	background: linear-gradient(to right,#ff5d0e,#ffa70e);
+}
+/* 设置贵宾通道 */
+.guibing{
+	width: 110px;
+	height: 27px;
+	border-radius:7px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 27px;
+	position: absolute;
+	right: 19px;
+	top: 595px;
+	color: #BBBBBB;
+	border: 1px solid #BBBBBB;
+}
+.acti-top{
+	height: 650px;
+}

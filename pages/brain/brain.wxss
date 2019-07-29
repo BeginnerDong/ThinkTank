@@ -1,0 +1,245 @@
+
+a{
+	text-decoration: none;
+}
+.zhinang{
+	width: 100%;
+	height: 45px;
+	display: flex;
+}
+/* 设置大图片 */
+.nanshi{
+	width: 100%;
+	height: 540px;
+}
+.zhin{
+	border-bottom: 3px solid rgb(40,171,238);
+	color: rgb(40,171,238);
+
+}
+.zuanshi{
+	line-height: 41px;
+	width: 50%;
+	height: 41px;
+	text-align: center;
+	font-size: 14px;
+	color: rgb(153,153,153);
+}
+.zuanshi span{
+	height:41px;
+   display:inline-block
+}
+/* 链接 */
+.link{
+	position: absolute;
+	top: 483px;
+	left: 8px;
+	width: 358px;
+	height: 60px;
+}
+.ll{
+	color: #FFFFFF;
+	font-size: 12px;
+	width: 60%;
+	height: 60px;
+	padding-left: 15px;
+	line-height: 60px;
+	
+}
+.goumai{
+ 	width: 75px;
+	height: 25px;
+	border-radius: 100px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	right: 7px;
+	top: 18px;
+	color: #FFFFFF;
+	background: linear-gradient(to right,#ff5d0e,#ffa70e); 
+}
+/*  设置公开课程 */
+.gong {
+	position: relative;
+	top: 35px;
+	width: 100%;
+	height: 300px;
+}
+
+.gong-tu {
+	margin-left: 10px;
+	width: 4pt;
+	height: 18pt;
+	background-color: rgb(40, 171, 238);
+	float: left;
+}
+
+.gong-gk {
+	margin-left: 10px;
+	font-size: 15px;
+	color: rgb(34, 34, 34);
+}
+
+/* 设置资讯文章 */
+.zi {
+	position: relative;
+	top: 18px;
+	width: 100%;
+	
+}
+
+.zixun {
+	position: relative;
+	border-bottom: 1px solid #f3f3f3;
+	width: 100%;
+	height: 117px;
+}
+
+.zixun-z {
+	position: relative;
+	width: 100%;
+	height: 135px;
+}
+
+.zixun-x {
+	position: relative;
+	top: 15px;
+	left: 228px;
+	width: 130px;
+	height: 85px;
+}
+
+.zixun-div {
+	position: absolute;
+	right: 162px;
+	top: 12px;
+	width: 200px;
+	height: 105px;
+
+}
+
+.picker {
+	font-size: 13px;
+	color: rgb(34, 34, 34);
+}
+
+.picker-top {
+	font-size: 11px;
+	color: rgb(153, 153, 153);
+	margin-top: 13px;
+}
+
+.picker-date {
+	font-size: 11px;
+	color: rgb(153, 153, 153);
+	margin-top: 12px;
+}
+
+.ci {
+	position: relative;
+	top: 36px;
+	width: 100%;
+	
+}
+
+/* 设置第二个div */
+.foot-f {
+	position: relative;
+	width: 100%;
+	height: 135px;
+}
+.foot-ff {
+	position: relative;
+	left: 180px;
+	top: -135px;
+	width: 100%;
+	height: 135px;
+}
+.foot-fff {
+	position: relative;
+	left: 0px;
+	top: -110px;
+	width: 100%;
+	height: 135px;
+}
+.foot-ffff {
+	position: relative;
+	left: 180px;
+	top: -245px;
+	width: 100%;
+	height: 135px;
+}
+
+.foot-f-z {
+	position: relative;
+	width: 100%;
+	height: 135px;
+}
+
+.foot-f-x {
+	position: relative;
+	left: 15px;
+	top: 15px;
+	width: 160px;
+	height: 100px;
+}
+
+.foot-f-div {
+	position: absolute;
+	right: 200px;
+	top: 115px;
+	width: 158px;
+	height: 57px;
+
+}
+
+.pickerr {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #ff5d0e;
+}
+
+.picker-datete {
+	font-size: 12px;
+	color: #2E82FF;
+	margin-top: 5px;
+}
+
+.picker-hp {
+	position: relative;
+	top: -16px;
+	right: -50px;
+	font-size: 12px;
+	color: #A1A1A1;
+}
+
+.lucency {
+	position: absolute;
+	top: 87px;
+	left: 16px;
+	z-index: 10;
+	background-color: #000000;
+	opacity: 0.5;
+	border-radius: 0px 0px 8px 8px;
+	color: #FFFFFF;
+	width: 149px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 10px;
+	font-size: 13px;
+}
+
+.navbar_item {
+	width: 25%;
+	text-align: center;
+}
+
+.nav_img image {
+	width: 58rpx;
+	height: 58rpx;
+}
+
+.acti-top {
+
+}

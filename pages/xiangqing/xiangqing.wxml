@@ -1,0 +1,111 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置头部 -->
+			
+			<view style="width: 100%;height: 190px;">
+			
+				
+				<video   style="width: 100%;height: 190px;" src="{{web_chooseSku.bannerImg[0].url}}" ></video>
+				
+			</view>
+			<view>
+				<view class='topTabSwiper'>
+					<view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>详情</view>
+					<view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>目录</view>
+					<view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>评价({{web_total}})</view>
+				</view>
+
+				<view class='swiper_con' wx:if="{{currentData == 0}}">
+					<view class="xinxi">
+						<!-- 设置内容 -->
+						<view>课程信息</view>
+						<view>
+							<view>课程名称：{{web_mainData.title}}</view>
+							<view>课程难度：{{web_mainData.difficulty}}</view>
+							<view>课程时长：{{web_mainData.times}}</view>
+							<view>学习人数：{{web_mainData.view_count}}人</view>
+						</view>
+					</view>
+					<view class="xinxi">
+						<!-- 设置内容 -->
+						<view>课程介绍</view>
+						<view>
+							<view class="content ql-editor">
+								<import src="../../wxParse/wxParse.wxml" />
+								<template is="wxParse" data="{{wxParseData:web_mainData.content}}" />
+							</view>
+						</view>
+					</view>
+					<view class="xinxi">
+						<!-- 设置内容 -->
+						<view>课程讲师</view>
+						<view>
+							<view>
+								<image src="{{web_mainData.headImg[0].url}}" style="width: 10%;height: 37px;"></image><span class="span">{{web_mainData.teacher }}</span>
+							</view>
+							<view>{{web_mainData.introduction}}</view>
+							
+						</view>
+					</view>
+				</view>
+
+				<view class='swiper_con' wx:if="{{currentData == 1}}">
+					<view class="xinx">
+						<!-- 设置内容 -->
+						<view style="height: 30px;line-height: 30px;">
+							<image src="../../image/coursevoice-icon3.png" class="img-one"></image>{{web_mainData.title}}
+						</view>
+						<block wx:for="{{web_mainData.sku}}" wx:key="id">
+							<view class="public" bindtap="chooseSku" data-index="{{index}}">
+								<image src="../../image/coursevoice-icon1.png" class="ing"></image>
+								<view class="inh">{{item.title}}</view>
+							</view>					
+						</block>
+						
+						
+					</view>
+
+
+				</view>
+
+				<view class='swiper_con' wx:if="{{currentData == 2}}">
+					<view class="xinxi">
+						<!-- 设置内容 -->
+						<view style="text-align: center;height: 40px;line-height: 40px;">有什么想说的呢？赶紧
+						<span bindtap="intoPath" data-path="/pages/pingjia/pingjia?id={{web_mainData.id}}" style="display: inline-block;background-color: #00BFFF;color: #FFFFFF;height: 20px;margin-top: 4px;line-height: 20px;">去评价</span>吧~</view>
+						<block wx:for="{{web_messageData}}" wx:key="id">
+							<view>
+								<view style="display: flex;align-items: center;">
+									<image src="{{item.user.headImgUrl}}" style="width: 10%;height: 37px;border-radius:50%">
+										
+									</image><span class="spann" style="margin-left: 5px;width:50%;">{{item.user.nickname}}</span>
+									<view class="shijin" style="padding: 0;width: 40%;">{{item.create_time}}</view>
+								</view>
+								<view>{{item.content}}</view>
+								
+							</view>
+						</block>
+						
+						
+
+					</view>
+
+				</view>
+				<view style="width: 100%;height: 50px;"></view>
+				<!-- 设置固定 -->
+				<view class="guding">
+					<view bindtap="intoPathRedirect" data-path="/pages/index/index">
+						<image src="../../image/coursevoice-icon5.png"></image>
+						<view>返回首页</view>
+					</view>
+					<view bindtap="collect">
+						<image src="{{web_isInCollectData?'../../image/coursevoice-icon6a.png':'../../image/coursevoice-icon6.png'}}"></image>
+						<view>收藏</view>
+					</view>
+					<view>开始学习</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

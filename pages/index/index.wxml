@@ -1,0 +1,139 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置头部 -->
+			<view class="top-name">
+			
+			<view class="top-name-top">	
+			<view class="tubiao"></view>
+			<view class="zhi">智囊团慧眼识盘</view>	
+			<view class="zhi">智囊团慧课堂开学啦，学习股价分析</view>
+			<view class="zhuce"  bindtap="intoPath" data-path="/pages/second/second">注册会员</view>
+			</view>
+			</view>
+			<!-- 设置div -->
+			
+			<swiper style="width: 100%;height: 190px;margin-top: 60px;"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+			 interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+			
+				<block wx:for="{{web_sliderData.mainImg}}" wx:index="{{index}}">
+					<swiper-item  style="width: 100%;height: 190px;" >
+						<image   style="width: 100%;height: 190px;"  mode="aspectFill" src="{{item.url}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+					</swiper-item>
+				</block>
+			</swiper>
+			<!--设置搜索框 -->
+			<view class="search">
+				<view class="search-to">
+					<image src="../../image/home-icon1.png"></image>
+					<input type="text" value="" placeholder="请输入您想要观看的课程" class="in" data-key="title" bindblur="changeBind"  value="{{web_sForm.title}}"/>
+				</view>
+				<view class="search-on"  bindtap="goSearch">
+					搜索
+				</view>
+			</view>
+			<!-- 设置小图标 -->
+			<view class="xiaotb">
+			<view class="x" bindtap="intoPathRedirect" data-path="/pages/brain/brain"><image src="../../image/home-icon2.png" class="img"></image><view class="v">加入智囊团</view></view>
+			<view class="x" bindtap="intoPath" data-path="/pages/voice/voice?name=音频60s"><image src="../../image/home-icon3.png" class="img"></image><view class="v">60S语音</view></view>
+			<view class="x" bindtap="intoPath" data-path="/pages/articleList/articleList?name=盘后总结">
+				<image src="../../image/home-icon4.png" class="img"></image>
+				<view class="v">盘后总结</view>
+			</view>
+			<view class="x" bindtap="intoPath" data-path="/pages/articleList/articleList?name=每日涨停分享"><image src="../../image/home-icon5.png" class="img"></image><view class="v">每日涨停分享</view></view>
+			<view class="x" bindtap="intoPath" data-path="/pages/daka/daka?name=大咖联盟"><image src="../../image/home-icon6.png" class="img"></image><view class="v">大咖联盟</view></view>
+			<view class="x" bindtap="intoPath" data-path="/pages/articleList/articleList?name=活动中心"><image src="../../image/home-icon7.png" class="img"></image><view class="v">活动中心</view></view>
+			<view class="x" bindtap="intoPath" data-path="/pages/articleList/articleList?name=精选文章"><image src="../../image/home-icon8.png" class="img"></image><view class="v">精选文章</view></view>
+			<view class="x" bindtap="intoPath" data-path="/pages/nlivestreaming/nlivestreaming"><image src="../../image/home-icon9.png" class="img"></image><view class="v">直播大厅</view></view>
+			</view>
+			<!-- 设置公开课程 -->
+			
+			<view class="gong"  bindtap="intoPath" data-path="/pages/gongkai/gongkai">
+				<view class="gong-tu"></view>
+				<span class="gong-gk">公开课程</span>
+				<!-- 设置图片 -->
+				<view class="gong-img" >
+					<image src="../../image/home-img1.png" class="tupian"></image>
+				</view>
+			</view>
+			<!-- 设置交流群 -->
+			<view bindtap="join">
+				<image src="../../image/home-icon10.png" class="jiao"></image>
+				<view class="liu">交流群</view>
+			</view>
+			<!-- 设置资讯文章 -->
+			<view class="zi">
+				<view class="gong-tu"></view>
+				<span class="gong-gk">资讯文章</span>
+				<block wx:for="{{web_mainData}}" wx:key="id">
+					<view class="zixun" bindtap="intoPath" data-path="/pages/artDetail/artDetail?id={{item.id}}">
+						<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
+						<view class="zixun-div">
+							<view class="picker">{{item.title}}</view>
+							<view class="picker-top">{{item.description}}</view>
+							<view class="picker-date">{{item.create_time}}</view>
+						</view>
+					</view>
+				</block>			
+			</view>
+			
+			<view style="height: 100%;width: 100%;background: black;opacity: 0.6;position: fixed;top: 0;z-index:888" wx:if="{{isBind||isGroup}}" bindtap="close">
+				
+			</view>
+			<view style="width: 80%;height: 60%;position: fixed;top:20%;left:10%;background: #fff;z-index:999;border-radius: 10px;" wx:if="{{isGroup}}">
+				<view style="height: 60%;width: 100%;display: flex;align-items: center;justify-content: center;">
+					<image src="../../image/coupons-icon2.png" style="height: 280rpx;width: 280rpx;"></image>
+				</view>
+				<view style="font-size: 15px;color: rgb(102,102,102);width: 100%;text-align: center;">长按二维码，加入交流群</view>
+				
+				<view style="height:33%;width: 100%;display: flex;align-items: center;justify-content: center;" bindtap="close">
+					<image src="../../image/stores-icon10.png" style="height: 40rpx;width: 40rpx;"></image>
+				</view>
+			</view>
+			<view style="width: 90%;height: 45%;position: fixed;top:25%;left:5%;background: #fff;z-index:999;border-radius: 10px;" wx:if="{{isBind}}">
+				<view style="width: 100%;height:120rpx;line-height: 120rpx;text-align: center;font-size: 15px;">请绑定手机号</view>
+				<view style="width: 90%;height:100rpx;line-height: 100rpx;display: flex;;margin: 0 auto">
+					<view style="font-size: 15px;width: 15%;">手机号</view>
+					<input data-key="phone" bindblur="changeBindTwo"  value="{{web_submitData.phone}}" style="height: 100rpx;line-height: 100rpx;font-size:12px;width: 50%;margin-left:10px;" placeholder="请输入手机号码"/>
+				</view>
+				<view style="width: 90%;height:100rpx;line-height: 100rpx;display: flex;margin: 0 auto;">
+					<view style="font-size: 15px;width: 15%;">验证码</view>
+					<input data-key="code" bindblur="changeBindTwo"  value="{{web_submitData.code}}" style="height: 100rpx;line-height: 100rpx;font-size:12px;width: 50%;margin-left:10px;" placeholder="请输入验证码"/>
+					<view style="font-size:14px;color: #FF5D0E;" bindtap="{{web_buttonCanClick?'getCode':''}}">{{text}}</view>
+				</view>
+				<button open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}" style="font-weight: normal;font-size:15px;border-radius:25px;background: linear-gradient(to right,#ff5d0e,#ffa70e);width: 90%;margin: 50px auto;height: 40px;line-height: 40px;color: #fff;">
+					确定
+				</button>
+			</view>
+			<!-- 设置脚部 -->
+			<view style="width: 100%;height: 200rpx;"></view>
+			<view class="navbar">
+				<view class="navbar_item">
+					<view class="nav_img">
+						<image src="../../image/nabar1-a.png"></image>
+					</view>
+					<view class="text this-text">首页</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/course/course">
+					<view class="nav_img">
+						<image src="../../image/nabar2.png"></image>
+					</view>
+					<view class="text">课程</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/brain/brain">
+					<view class="nav_img">
+						<image src="../../image/nabar3.png"></image>
+					</view>
+					<view class="text">智囊团</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
+					<view class="nav_img">
+						<image src="../../image/nabar4.png" ></image>
+					</view>
+					<view class="text">我的</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	
+</view>

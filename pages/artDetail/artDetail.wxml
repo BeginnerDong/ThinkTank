@@ -1,0 +1,20 @@
+<!--pages/helpCenterDetails/helpCenterDetails.wxml-->
+<view class="helpCenterDetails-container">
+	<view class="big-title"><text>{{web_mainData.title}}</text></view>
+	<view class="">
+		<view class="big-text-content">
+			<!--first-->
+			<view class="text-content">
+				<view class="content ql-editor">
+					<import src="../../wxParse/wxParse.wxml" />
+					<template is="wxParse" data="{{wxParseData:web_mainData.content}}" />
+				</view>
+			</view>
+			<!--first-->
+
+			<!-- second-->
+
+			<!-- second-->
+		</view>
+	</view>
+</view>

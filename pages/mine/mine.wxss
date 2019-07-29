@@ -1,0 +1,101 @@
+
+a{
+	text-decoration: none;
+}
+
+.colour{
+	border: 1px solid #ff5d0e;
+	width: 100%;
+	height: 220px;
+	background-color: #ff5d0e;
+}
+/* 设置图像人物 */
+.image{
+
+	width: 100%;
+	height: 160px;
+	margin-top: 30px;
+	text-align: center;
+}
+.image>image{
+	width: 40%;
+	height: 60px;
+}
+.ni{
+	color: #FFFFFF;
+}
+.nic{
+	height: 55px;
+	font-size: 13px;
+	line-height: 50px;
+}
+.nix{
+	font-size: 14px;
+}
+.set{
+	width: 100%;
+	height: 220px;
+	margin-top: 30px;
+}
+.g{
+	width: 20px;
+	height: 20px;
+	
+}
+.l{
+	width: 6px;
+	height: 15px;
+	
+}
+.one-q{
+	width: 40px;
+	height: 40px;
+	float: left;
+	clear: both;
+}
+.one-z{
+	width: 15px;
+	height: -12px;
+	margin-top: -23px;
+	padding-left: 330px;
+}
+.hui{
+	font-size: 14px;
+	color: rgb(34,34,34);
+	padding-left: 30px;
+}
+.one{
+	border-bottom: 1px solid #BBBBBB;
+	margin: auto;
+	width: 90%;
+	height: 60px;
+}
+.one-e{
+	margin: auto;
+	width: 90%;
+	height: 60px;
+}
+
+/* 设置会员等级 */
+.vip{
+	width: 90%;
+	height: 68px;
+	position: absolute;
+	top: 185px;
+	left: 15px;
+	border-radius: 10px;
+	background-color: #f7f4f4;
+	text-align: center;
+}
+.vip-h{
+	font-size: 12px;
+	color: rgb(102,102,102);
+	height: 32px;
+	line-height: 32px;
+}
+.vip-z{
+	font-size: 13px;
+	color: rgb(34,34,34);
+	height: 32px;
+	line-height: 32px;
+}

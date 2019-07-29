@@ -1,0 +1,95 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置头部 -->
+			<view class="colour">
+				<!-- 设置图像人物 -->
+				<view class="image">
+					<view style="height: 120rpx;">
+						<image src="{{web_mainData.headImgUrl}}" style="border-radius:50%;width: 60px;height: 60px;"></image>
+					</view>
+					
+					<view class="nic ni">{{web_mainData.nickname}}</view>
+					<view class="nix ni">学号：{{web_mainData.user_no}}</view>
+				</view>
+			</view>
+			<!-- 设置内容 -->
+			<view class="set">
+				<view class="one" bindtap="intoPath" data-path="/pages/second/second">
+					<view style="height: 20px;"></view>
+					<view class="one-q">
+						<image src="../../image/about-icon1.png" class="g"></image>
+					</view>
+					<view class="hui" >购买会员</view>
+					<view class="one-z">
+						<image src="../../image/thearrow-icon.png" class="l"></image>
+					</view>
+				</view>
+				<view class="one" data-path="/pages/foot/foot" bindtap="intoPath">
+					<view style="height: 20px;"></view>
+					<view class="one-q">
+						<image src="../../image/about-icon2.png" class="g"></image>
+					</view>
+					<view class="hui">浏览记录</view>
+					<view class="one-z">
+						<image src="../../image/thearrow-icon.png" class="l"></image>
+					</view>
+				</view>
+				<view class="one" data-path="/pages/collect/collect" bindtap="intoPath">
+					<view style="height: 20px;"></view>
+					<view class="one-q">
+						<image src="../../image/about-icon3.png" class="g"></image>
+					</view>
+					<view class="hui">我的收藏</view>
+					<view class="one-z">
+						<image src="../../image/thearrow-icon.png" class="l"></image>
+					</view>
+				</view>
+				<view class="one-e" bindtap="intoPath" data-path="/pages/my/my">
+					<view style="height: 20px;"></view>
+					<view class="one-q">
+						<image src="../../image/about-icon4.png" class="g"></image>
+					</view>
+					<view class="hui" >我的优惠劵</view>
+					<view class="one-z">
+						<image src="../../image/thearrow-icon.png" class="l"></image>
+					</view>
+				</view>
+			</view>
+			<!-- 设置会员等级 -->
+			<view class="vip">
+				<view class="vip-h">会员等级</view>
+				<view class="vip-z" wx:if="{{web_mainData.info.level==2}}">智囊团钻石会员</view>
+				<view class="vip-z" wx:if="{{web_mainData.info.level==1}}">智囊团会员</view>
+				<view class="vip-z" wx:if="{{web_mainData.info.level==0}}">非会员</view>
+			</view>
+			<!-- 设置脚部 -->
+			<view class="navbar">
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/index/index">
+					<view class="nav_img">
+						<image src="../../image/nabar1.png"></image>
+					</view>
+					<view class="text">首页</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/course/course">
+					<view class="nav_img">
+						<image src="../../image/nabar2.png"></image>
+					</view>
+					<view class="text">课程</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/brain/brain">
+					<view class="nav_img">
+						<image src="../../image/nabar3.png"></image>
+					</view>
+					<view class="text">智囊团</view>
+				</view>
+				<view class="navbar_item" bindtap="intoPathRedirect" data-path="/pages/mine/mine">
+					<view class="nav_img">
+						<image src="../../image/nabar4-a.png"></image>
+					</view>
+					<view class="text this-text">我的</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

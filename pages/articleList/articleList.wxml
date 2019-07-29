@@ -1,0 +1,19 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置资讯文章 -->
+			<block wx:for="{{web_mainData}}" wx:key="id">
+				<view class="zi">
+					<view class="zixun">
+						<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
+						<view class="zixun-div">
+							<view class="picker avoidOverflow">{{item.title}}</view>
+							<view class="picker-top avoidOverflow2">{{item.description}}</view>
+							<view class="picker-date">{{item.create_time}}</view>
+						</view>
+					</view>
+				</view>		
+			</block>
+		</view>
+	</view>
+</view>

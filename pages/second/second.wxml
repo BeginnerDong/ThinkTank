@@ -1,0 +1,28 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置头部 -->
+			<!-- 设置第一个div -->
+			<block wx:for="{{web_mainData}}">
+				<view class="block">
+					<image src="{{item.mainImg[0].url}}"></image>
+					<!-- 设置里面的div -->
+					<view class="embed" style="position: relative;">
+						<view class="jiaru">{{item.title}}</view>
+						<view class="rmb">{{item.price}}元</view>
+						<view class="kait"  bindtap="nextPage" data-index="{{index}}">开通</view>
+					</view>
+				
+				</view>
+			</block>
+			
+			
+			<!-- 设置贵宾通道 -->
+			<view class="guibing"  bindtap="intoPath" data-path="/pages/lnvitation/lnvitation" wx:if="{{web_userData.info.level==0}}">
+				贵宾邀请码通道
+			</view>
+		</view>
+	</view>
+
+	
+</view>

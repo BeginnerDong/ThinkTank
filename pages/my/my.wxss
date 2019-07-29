@@ -1,0 +1,86 @@
+.tab {
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	padding: 35rpx 0;
+	font-size: 15px;
+	
+}
+
+.topTabSwiper {
+
+	zoom: 1;
+}
+
+.topTabSwiper:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.tabBorer {
+	border-bottom: 3px solid #ff5d0e;
+	color: #ff5d0e;
+}
+
+.swiper {
+	width: 100%;
+}
+
+.swiper_con {
+	text-align: center;
+	width: 100%;
+	height: 146px;
+	margin-top: 35rpx;
+}
+.swiper_con>image{
+	width: 85%;
+	height: 147px;
+}
+
+/* 设置大盒子 */
+.dahezi{
+	position: relative;
+	top: -126px;
+	left: 40px;
+	width: 80%;
+	height: 100px;
+	
+}
+.dahezi>view:nth-child(1){
+	position: absolute;
+	top: 44px;
+	left: 5px;
+	font-size: 28px;
+	color: #FFD101;
+}
+.dahezi>view:nth-child(2){
+	position: absolute;
+	top: 5px;
+	left: 32px;
+	font-size: 65px;
+	color: #FFD101;
+}
+.dahezi>view:nth-child(3){
+	position: absolute;
+	top: 24px;
+	left: 114px;
+	font-size: 28px;
+	color: #FFD101;
+}
+.dahezi>view:nth-child(4){
+	position: absolute;
+	top: 62px;
+	left: 114px;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+.dahezi>view:nth-child(5){
+	position: absolute;
+	top: 28px;
+	left: 255px;
+	font-size: 16px;
+	color: #FFFFFF;
+	width: 32px;
+	
+}

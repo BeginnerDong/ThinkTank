@@ -1,0 +1,20 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置全局 -->
+			<view class="overall">
+				姓名:
+				<view class="input">
+					<input type="text"  placeholder="请输入您的姓名" data-key="name" bindblur="changeBind"  value="{{web_sForm.name}}"/>
+				</view>
+				手机号:
+				<view class="input">
+					<input type="text"  placeholder="请输入您的手机号" data-key="phone" bindblur="changeBind"  value="{{web_sForm.phone}}"/>
+				</view>
+				
+				<!-- 设置点击进入 -->
+				<button class="dianji" open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}">提交</button>
+			</view>
+		</view>
+	</view>
+</view>

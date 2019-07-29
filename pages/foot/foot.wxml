@@ -1,0 +1,24 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			
+			<!-- 设置第二个div -->
+			<block wx:for="{{web_mainData}}">
+				<view class="foot-f" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
+					<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
+					<view class="lucency">
+						{{item.view_count}}人已学习
+					</view>
+					<view class="foot-f-div">
+						<picker class="picker">{{item.title}}</picker>
+						<view class="picker-date">{{item.score}}%</view>
+						<view class="picker-hp">好评</view>
+					</view>
+				</view>
+			</block>
+		</view>
+
+	</view>
+
+
+</view>

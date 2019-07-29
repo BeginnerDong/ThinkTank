@@ -1,0 +1,38 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+		<!-- 设置订单 -->
+			<view class="dingdan">订单详情</view>
+		<!-- 设置商品 -->
+			<view class="sp">
+				<view class="sp-one">商品名称</view>
+				<view class="sp-two">{{web_mainData.products[0].snap_product.title}}</view>
+			</view>
+			<view class="sp">
+				<view class="sp-one a">订单编号</view>
+				<view class="sp-two">{{web_mainData.order_no}}</view>
+			</view>
+			<view class="sp">
+				<view class="sp-one b">商家名称</view>
+				<view class="sp-two">智囊团慧眼识盘</view>
+			</view>
+			<view class="sp">
+				<view class="sp-one c">商品价格</view>
+				<view class="sp-two" style="color: rgb(255,59,59);">￥{{web_mainData.products[0].snap_product.price}}</view>
+			</view>
+			<view class="dingdan">支付金额</view>
+			<view class="sp">
+				<view class="sp-one d">优惠金额</view>
+				<view class="sp-two" style="color: rgb(31,188,53);">￥{{web_pay.coupon[0].price?web_pay.coupon[0].price:'0.00'}}</view>
+			</view>
+			<view class="sp">
+				<view class="sp-one d">还需支付</view>
+				<view class="sp-two" style="color: rgb(255,59,59);">￥{{web_pay.wxPay.price}}</view>
+			</view>
+			<!-- 设置提交 -->
+			<view class="submit" bindtap="{{web_buttonCanClick?'submit':''}}">
+				提交
+			</view>
+		</view>
+	</view>
+</view>

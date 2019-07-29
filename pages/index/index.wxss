@@ -1,0 +1,247 @@
+
+a{
+	text-decoration: none;
+}
+.acti-top{
+	
+}
+/* 设置头部 */
+.top-name{
+	width: 100%;
+	height: 60px;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0px;
+	z-index: 999;
+}
+.top-name-top{
+	width: 92%;
+	height: 45px;
+	margin: auto;
+	
+}
+.tubiao{
+	margin-top: 10rpx;
+	width: 33px;
+	height: 33px;
+	background-color: #000000;
+	border-radius: 10rpx;
+	float: left;
+	clear: both;
+}
+.zhi{
+	padding-left: 45px;
+	height: 24px;
+	font-size: 12px;
+	color: rgb(102,102,102);
+}
+.zhuce{
+	width: 65px;
+	height: 25px;
+	border-radius: 3px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	right: 25px;
+	top: 11px;
+	color: #FFFFFF;
+	background: linear-gradient(to right,#ff5d0e,#ffa70e);
+}
+/*设置div*/
+.beij{
+	width: 100%;
+	height: 192pt;
+	position: relative;
+	top: 43px;
+}
+.beij>image{
+	width: 100%;
+	height: 190px;
+}
+/* 设置搜索框 */
+.search{
+	position: absolute;
+	top: 235px;
+	z-index: 200;
+	width: 118%;
+	height: 30px;
+}
+.search-on,.search-to{
+	box-shadow: #bbbbbb 1px 6px 10px 1px;
+}
+.search-to{
+	width: 60%;
+	height: 30px;
+	border-radius:100px 0px 0px 100px;
+	margin-left: 25px;
+	float: left;
+	background-color: #fff;
+}
+.search-to>image{
+	width: 15px;
+	height: 15px;
+	float: left;
+	clear: both;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+.in{
+	width: 85%;
+	height: 40px;
+	color: #000000;
+	margin-left: 45px;
+	margin-top: -4px;
+	font-size: 12px;
+}
+.search-on{
+	width: 15%;
+	height: 30px;
+	border-radius:0px 100px 100px 0px;
+	margin-left: 290px;
+	background: linear-gradient(to right,#ff5d0e,#ffa70e);
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	
+	
+}
+/* 设置小图标 */
+.xiaotb{
+	position: relative;
+	top: 10px;
+	width: 100%;
+	height: 180px;
+	margin-top: 25px;
+}
+.x{
+
+	float: left;
+	width: 93px;
+	height: 90px;
+	text-align: center;
+	
+}
+.img{
+	width: 45px;
+	height: 45px;
+	transition: all 0.5s linear;
+	transform: rotate(0deg);
+}
+.img:hover{
+	transform: rotate(360deg);
+}
+.v{
+	font-size: 12px;
+	color: #777777;
+}
+/*  设置公开课程 */
+.gong{
+	position: relative;
+	top: 35px;
+	width: 100%;
+	height: 300px;
+}
+.gong-tu{
+	margin-left: 10px;
+	width: 4pt;
+	height: 18pt;
+	background-color:rgb(40,171,238);
+	float: left;
+}
+.gong-gk{
+	margin-left: 10px;
+	font-size: 15px;
+	color: rgb(34,34,34);
+}
+/*  设置图片*/
+.gong-img{
+	position: absolute;
+	top: 40px;
+}
+.tupian{
+	width: 375px;
+	height: 211px;
+}
+/* 设置资讯文章 */
+.zi{
+	position: relative;
+	top: 35px;
+	width: 100%;
+}
+.zixun{
+	position: relative;
+	border-bottom: 1px solid #f3f3f3;
+	width: 100%;
+	height: 135px;
+}
+.zixun-z{
+	position: relative;
+	width: 100%;
+	height: 135px;
+}
+.zixun-x{
+	position: relative;
+	top: 15px;
+	left: 12px;
+	width: 150px;
+	height: 100px;
+}
+.zixun-div{
+	position: absolute;
+	right: 3px;
+	top: 13px;
+	width: 200px;
+	height: 105px;
+
+}
+.picker{
+	font-size: 13px;
+	color: rgb(34,34,34);
+}
+.picker-top{
+	font-size: 11px;
+	color: rgb(153,153,153);
+	margin-top: 13px;
+}
+.picker-date{
+	font-size: 11px;
+	color: rgb(153,153,153);
+	margin-top: 22px;
+}
+/* 设置交流群 */
+.jiao{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 710px;
+	right: 0px;
+}
+.liu{
+	position: absolute;
+	top: 768px;
+	right: 5px;
+	font-size: 13px;
+}
+/* 设置脚部 */
+.foot{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	top: 110px;
+}
+.ul li{
+	display: inline-block;
+	border: 1px solid;
+	width: 91px;
+	height: 100px;
+}
+.icon{
+	position: absolute;
+	width: 91px;
+	height: 91px;
+}
+.iconstack{
+	z-index: 10;
+}

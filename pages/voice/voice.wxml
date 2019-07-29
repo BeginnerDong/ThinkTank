@@ -1,0 +1,33 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置全局 -->
+			<view class="quanju">
+				<!-- 设置背景颜色 -->
+				<block wx:for="{{web_mainData}}">
+					<view class="light">
+						<!-- 设置文字信息 -->
+						<view class="content">
+							<view></view>
+							<view>{{item.create_time}}</view>
+						
+						</view>
+						<!-- 设置左部内容 -->
+						<view class="content-one">
+							<view><image src="{{item.mainImg[0].url}}" style="border-radius: 50%;"></image></view>
+							<view>222</view>
+						</view>
+						<!-- 设置中间内容 -->
+						<view class="content-two">
+							<view>{{item.title}}</view>
+							<view><image src="../../image/voice-icon1.png"></image>
+								<view class="san">{{item.description }}<image data-index="{{index}}" bindtap="{{web_buttonCanClick?(item.goodMe.length==0?'clickGood':''):''}}" 
+								 src="{{item.goodMe.length>0?'../../image/voice-icon3.png':'../../image/voice-icon2.png'}}" class="ishu"></image>{{item.good.length}}</view>
+							</view>
+						</view>
+					</view>
+				</block>			
+			</view>
+		</view>
+	</view>
+</view>

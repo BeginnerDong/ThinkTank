@@ -1,0 +1,27 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<view class="foot-f">
+				<image src="{{web_mainData.mainImg[0].url}}" class="foot-f-x"></image>
+				<view class="lucency">
+					{{web_mainData.view_count}}人已学习
+				</view>
+				<view class="foot-f-div">
+					<picker class="picker">{{web_mainData.title}}</picker>
+					<view class="picker-date">{{web_mainData.score}}%</view>
+					<view class="picker-hp">好评</view>
+				</view>
+			</view>
+			
+			<view >
+				<textarea data-key="content" bindblur="changeBind"  value="{{web_sForm.content}}" style="padding: 10px;font-size:14px;height: 200px;width: 90%;margin: 0 auto;background: #f6f6f6;margin-top: 20px;" placeholder="请输入评论内容">
+					
+				</textarea>
+			</view>
+			
+			<button open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}" style="font-weight: normal;font-size:15px;border-radius:25px;background: linear-gradient(to right,#ff5d0e,#ffa70e);width: 90%;margin: 50px auto;height: 40px;line-height: 40px;color: #fff;">
+				提交评价
+			</button>
+		</view>
+	</view>
+</view>

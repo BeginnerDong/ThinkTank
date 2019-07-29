@@ -1,0 +1,236 @@
+/**app.wxss**/
+.border-line{
+	border: solid 1rpx #fff;
+}
+.avoidOverflow{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+
+.avoidOverflow2{
+ text-overflow:ellipsis;
+ overflow:hidden;
+ display:-webkit-box;
+ -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
+ -webkit-box-orient:vertical;
+}
+.w700 {
+	width: 700rpx;
+  margin: 0px auto;
+}
+.ilblock{
+	display: inline-block;
+}
+.radius{
+	border-radius:12rpx ;
+}
+.hiden{
+	overflow: hidden;
+}
+.color1{
+	color:#323232;
+}
+.color2{
+	color: #A1A1A1;
+}
+.color3{
+	color: rgb(153,153,153);
+}
+.color4{
+	color: rgb(255,59,59);
+}
+.color41{
+	color: rgba(255,59,59,0.6);
+}
+.color5{
+	color: #fff;
+}
+.color6{
+	color:rgb(255,92,157);
+}
+.color7{
+	color: #ECAE79;
+}
+.color8{
+	color:#4891FF;
+}
+
+.bold-font{
+	font-weight: bold;
+}
+
+
+.font7{
+	font-size: 14rpx;
+}
+.font8{
+	font-size: 16rpx;
+}
+.font10{
+	font-size: 20rpx;
+}
+.font11{
+	font-size: 22rpx;
+}
+.font12{
+	font-size: 24rpx;
+}
+.font13{
+	font-size: 26rpx;
+}
+.font14{
+	font-size: 28rpx;
+}
+.font15{
+	font-size: 30rpx;
+}
+.font16{
+	font-size: 32rpx;
+}
+.font17{
+	font-size: 34rpx;
+}
+.font18{
+	font-size: 36rpx;
+}
+
+
+
+.radiu15{
+	border-radius: 15rpx;
+}
+.radiu40{
+	border-radius: 40rpx;
+}
+.radiu50{
+	border-radius: 50%;
+}
+
+
+.bg{
+	background:#FFD101;
+}
+
+.bg2{
+	background: #F2F2F2;
+}
+.bg3{
+	background: #FF5BA0;
+}
+.bg4{
+	background: #FFEEF0;
+}
+.bg5{
+	background: rgb(250,159,134);
+}
+.bg6{
+	background: #1AA034;
+}
+.bg7{
+	background: #2E82FF;
+}
+.bg8{
+	background: #FFAD00;
+}
+
+.flo-left{
+	float: left;
+}
+.flo-right{
+	float: right;
+}
+
+.overflow1{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.overflow2{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-align: justify;
+
+}
+.overflow3{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	text-align: justify;
+}
+.overflow5{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
+	text-align: justify;
+}
+ button{
+	width:100%;
+	height:48px;
+	background:rgba(255,209,1,1);
+	font-size:18px;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(50,50,50,1);
+}
+
+
+
+/***********navbar***********/
+.navbar{
+	height:110rpx;
+	width:100%;
+	position:fixed;
+	bottom:0rpx;
+	z-index:999;
+	background:#fff;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	box-shadow:0rpx 0rpx 15rpx #D5D5D5;
+}
+.nav_img image{
+	width:45rpx;
+	height:45rpx;
+}
+.navbar_item{
+	width: 25%;
+	text-align:center;
+}
+.navbar .text{
+	color:#a1a1a1;
+	font-size:24rpx;
+	margin-top: 5rpx;
+}
+.navbar .this-text{
+	color:#FF5D0E;
+}
+.nav_img{
+	width:64rpx;
+	height:64rpx;
+	margin:0 auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.flex{
+	display: flex;
+}
+.flex-all{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-align{
+	display: flex;
+	align-items: center
+}
+.flex-justify{
+	display: flex;
+	justify-content: center;
+}

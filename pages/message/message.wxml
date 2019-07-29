@@ -1,0 +1,15 @@
+<view>
+	<view class="acti">
+		<view class="acti-top">
+			<!-- 设置第一个小模块 -->
+			<view class="module">
+				<image src="../../image/perfectinformation-icon.png"></image>
+				<view class="ger">请完善您的个人信息</view>
+			</view>
+			<!-- 设置第二个小模块 -->
+			<view class="module_two" bindtap="intoPathRedirect" data-path="/pages/confirm/confirm"> 
+				确定
+			</view>
+		</view>
+	</view>
+</view>

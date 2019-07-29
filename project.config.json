@@ -1,0 +1,414 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.6",
+	"appid": "wx4c16a5493b7fff43",
+	"projectname": "%E6%99%BA%E5%9B%8A%E5%9B%A2",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 53,
+			"list": [
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/productDetail/productDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团期选择",
+					"pathName": "pages/dateSlecte/dateSlecte",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "同行",
+					"pathName": "pages/peer/peer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "销售",
+					"pathName": "pages/salers/salers",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "确认行程",
+					"pathName": "pages/schedule/schedule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "编辑游客",
+					"pathName": "pages/eduit/eduit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "游客信息",
+					"pathName": "pages/tourist/tourist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增出境游客",
+					"pathName": "pages/outbound/outbound",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新增剪贴板游客",
+					"pathName": "pages/scrap/scrap",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购买保险",
+					"pathName": "pages/insurance/insurance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "签署合同",
+					"pathName": "pages/sign/sign",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择游客",
+					"pathName": "pages/infomation/infomation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "行程信息",
+					"pathName": "pages/jounery/jounery",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自愿购物",
+					"pathName": "pages/shopping/shopping",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "待支付",
+					"pathName": "pages/paid/paid",
+					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "订单详情",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "电子保单",
+					"pathName": "pages/electro/electro",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单首页",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "续费",
+					"pathName": "pages/vt/vt",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "小宝钱包",
+					"pathName": "pages/money/money",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/vouchar/vouchar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "交易记录",
+					"pathName": "pages/record/record",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/collect/collect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的客户",
+					"pathName": "pages/client/client",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "基本信息",
+					"pathName": "pages/basic/basic",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增客户",
+					"pathName": "pages/customer/customer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增标签",
+					"pathName": "pages/labels/labels",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "供应商区域",
+					"pathName": "pages/area/area",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "系统主题",
+					"pathName": "pages/theme/theme",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的推广",
+					"pathName": "pages/promote/promote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推广明细",
+					"pathName": "pages/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "门店认证",
+					"pathName": "pages/stores/stores",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "旅行社名录",
+					"pathName": "pages/angents/agents",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/set/set",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "业务签章",
+					"pathName": "pages/signature/signature",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "认证成功",
+					"pathName": "pages/certification/certification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "pages/productList/productList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/productDetail/productDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "同行产品详情",
+					"pathName": "pages/datail/datail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加客户",
+					"pathName": "pages/customer/customer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "pages/deposit/deposit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自愿购物活动",
+					"pathName": "pages/acticity/acticity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "微店首页",
+					"pathName": "pages/micro/micro",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/gongkai/gongkai",
+					"pathName": "pages/gongkai/gongkai",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiangqing/xiangqing",
+					"pathName": "pages/xiangqing/xiangqing",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/second/second",
+					"pathName": "pages/second/second",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/orderform/orderform",
+					"pathName": "pages/orderform/orderform",
+					"query": "order_id=3",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/lnvitation/lnvitation",
+					"pathName": "pages/lnvitation/lnvitation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pingjia/pingjia",
+					"pathName": "pages/pingjia/pingjia",
+					"query": "id=1",
+					"scene": null
+				}
+			]
+		}
+	}
+}
