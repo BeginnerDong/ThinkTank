@@ -113,7 +113,7 @@ class Token {
 				};
 				console.log('postData', postData)
 				wx.request({
-					url: 'http://47.92.31.160/api/public/index.php/api/v1/Base/ProgramToken/get',
+					url: 'https://zhiyanshipan.com/api/public/index.php/api/v1/Base/ProgramToken/get',
 					method: 'POST',
 					data: postData,
 					success: function(res) {
@@ -152,7 +152,7 @@ class Token {
 				password: wx.getStorageSync('login').password,
 			}
 			wx.request({
-				url: 'http://47.92.31.160/api/public/index.php/api/v1/Func/Common/loginByUp',
+				url: 'https://zhiyanshipan.com/api/public/index.php/api/v1/Func/Common/loginByUp',
 				method: 'POST',
 				data: postData,
 				success: function(res) {

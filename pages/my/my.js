@@ -121,10 +121,9 @@ Page({
 		const postData = {
 			tokenFuncName: 'getProjectToken',
 			coupon_id: self.data.mainData[index].id,
-			pay: {
-				score: 0
-			},
+			
 			data:{
+				pay_status:1,
 				invalid_time:now + self.data.mainData[index].valid_time 
 			}
 		};

@@ -18,7 +18,7 @@ class Base {
 	request(params) {
 		var that = this;
 		getApp().globalData.buttonClick = true;
-		var baseRestUrl = 'http://47.92.31.160/api/public/index.php/api/v1/';
+		var baseRestUrl = 'https://zhiyanshipan.com/api/public/index.php/api/v1/';
 		
 		var url = baseRestUrl + params.url;
 		const callback = (res) => {
@@ -97,7 +97,7 @@ class Base {
 			};
 		};
 		wx.uploadFile({
-			url: 'http://47.92.31.160/api/public/index.php/api/v1/Base/FtpFile/upload',
+			url: 'https://zhiyanshipan.com/api/public/index.php/api/v1/Base/FtpFile/upload',
 			
 			filePath: filePath,
 			name: name,

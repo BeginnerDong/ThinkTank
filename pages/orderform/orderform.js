@@ -15,10 +15,15 @@ Page({
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
+		self.data.type = options.type;
 		self.data.order_id = options.order_id;
 		self.getMainData();
+		if(self.data.type=='升级'){
+			self.getHignProduct()
+		}
 	},
-
+	
+	
 
 	getMainData() {
 		const self = this;
@@ -41,6 +46,26 @@ Page({
 			self.getUserCouponData()
 		};
 		api.orderGet(postData, callback);
+	},
+	
+	getHignProduct() {
+		const self = this;
+		const postData = {};
+		postData.tokenFuncName = 'getProjectToken';
+		postData.searchItem = {
+			thirdapp_id:2,
+			type:1,
+			level:2
+		};
+		const callback = (res) => {
+			if (res.info.data.length > 0) {
+				self.data.productData = res.info.data[0];
+			} 
+			self.setData({
+				web_productData: self.data.productData,
+			});
+		};
+		api.productData(postData, callback);
 	},
 	
 	getUserCouponData() {
@@ -76,24 +101,46 @@ Page({
 	countPrice(){
 		const self = this;
 		self.data.pay = {};
-		if(self.data.userCouponData.length>0){
-			self.data.pay = {
-				wxPay:{
-					price:(self.data.mainData.price - self.data.userCouponData[0].value).toFixed(2)
-				},
-				coupon:[{
-					id:self.data.userCouponData[0].id,
-					price:self.data.userCouponData[0].value
-				}]
+		if(self.data.type=='升级'){
+			if(self.data.userCouponData.length>0){
+				self.data.pay = {
+					wxPay:{
+						price:(self.data.mainData.price - (self.data.userCouponData[0].value +self.data.productData.price)).toFixed(2)
+					},
+					coupon:[{
+						id:self.data.userCouponData[0].id,
+						price:self.data.userCouponData[0].value
+					}]
+				};
+				
+			}else{
+				self.data.pay = {
+					wxPay:{
+						price:(self.data.mainData.price - self.data.productData.price).toFixed(2)
+					},
+				};
 			};
-			
 		}else{
-			self.data.pay = {
-				wxPay:{
-					price:self.data.mainData.price
-				},
+			if(self.data.userCouponData.length>0){
+				self.data.pay = {
+					wxPay:{
+						price:(self.data.mainData.price - self.data.userCouponData[0].value).toFixed(2)
+					},
+					coupon:[{
+						id:self.data.userCouponData[0].id,
+						price:self.data.userCouponData[0].value
+					}]
+				};
+				
+			}else{
+				self.data.pay = {
+					wxPay:{
+						price:self.data.mainData.price
+					},
+				};
 			};
-		};
+		}
+		
 		self.setData({
 			web_pay:self.data.pay
 		})

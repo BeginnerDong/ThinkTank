@@ -48,21 +48,22 @@ Page({
 	nextPage(e) {
 		const self = this;
 		api.buttonCanClick(self);
+		var type = api.getDataSet(e,'type')
 		var index = api.getDataSet(e, 'index')
 		if (self.data.userData.info.phone == '') {
 			api.buttonCanClick(self, true);
 			api.pathTo('/pages/message/message', 'nav')
 		} else {
-			self.addOrder(index)
+			self.addOrder(index,type)
 		}
 	},
 
-	addOrder(index) {
+	addOrder(index,type) {
 		const self = this;
 		const postData = {
 			tokenFuncName: 'getProjectToken',
 			data: {
-
+				passage1:type
 			}
 		};
 		postData.orderList = [{
@@ -77,7 +78,7 @@ Page({
 				api.buttonCanClick(self, true);
 				api.pathTo('/pages/orderform/orderform?order_id='+res.info.id, 'nav')
 			} else {
-				api.commonInit(self, true);
+				api.buttonCanClick(self, true);
 				api.showToast(res.msg, 'none');
 			};
 		};

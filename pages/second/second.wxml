@@ -10,7 +10,10 @@
 					<view class="embed" style="position: relative;">
 						<view class="jiaru">{{item.title}}</view>
 						<view class="rmb">{{item.price}}元</view>
-						<view class="kait"  bindtap="nextPage" data-index="{{index}}">开通</view>
+						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="续期" wx:if="{{web_userData.info.level==item.level}}">续期</view>
+						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="开通" wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==2}}">开通</view>
+						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="开通" wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==0}}">开通</view>
+						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="升级" wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==1}}">升级</view>
 					</view>
 				
 				</view>
