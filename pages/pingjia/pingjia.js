@@ -93,14 +93,7 @@ Page({
 		api.messageAdd(postData, callback);
 	},
 	
-	onReachBottom() {
-		const self = this;
-		if (!self.data.isLoadAll && self.data.buttonCanClick) {
-			self.data.paginate.currentPage++;
-		
-			self.getMainData();
-		};
-	},
+	
 
 	submit() {
 		const self = this;
