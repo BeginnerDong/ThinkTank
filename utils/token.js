@@ -19,7 +19,7 @@ class Token {
 
 	getProjectToken(callback, postData) {
 
-		if ((postData && postData.refreshToken) || !wx.getStorageSync('token')) {
+		if ((postData && postData.refreshToken) || !wx.getStorageSync('token')||!wx.getStorageSync('token_expire_time')||new Date().getTime()>wx.getStorageSync('token_expire_time')) {
 			var params = {
 				token_name: 'token',
 				info_name: 'info',
@@ -121,7 +121,7 @@ class Token {
 						if (res.data && res.data.solely_code == 100000) {
 							wx.setStorageSync(params.info_name, res.data.info);
 							wx.setStorageSync(params.token_name, res.data.token);
-
+							wx.setStorageSync('token_expire_time',new Date().getTime()+60000);
 							if (callback) {
 								callback && callback(res.data.token);
 							};

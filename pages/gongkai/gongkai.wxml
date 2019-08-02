@@ -1,6 +1,6 @@
 <view>
 	<view style="display: flex;flex-wrap: wrap;">
-		<view class="card" wx:for="{{web_mainData}}" style="position: relative;" wx:key="id" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing">
+		<view class="card" wx:for="{{web_mainData}}" style="position: relative;" wx:key="id" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
 			<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
 			<view class="lucency">
 				{{item.description}}

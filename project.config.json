@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 53,
+			"current": 54,
 			"list": [
 				{
 					"id": -1,
@@ -406,6 +406,13 @@
 					"name": "pages/pingjia/pingjia",
 					"pathName": "pages/pingjia/pingjia",
 					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 54,
+					"name": "音频60s",
+					"pathName": "pages/voice/voice",
+					"query": "name=音频60s",
 					"scene": null
 				}
 			]
