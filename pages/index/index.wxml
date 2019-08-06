@@ -13,12 +13,12 @@
 			</view>
 			<!-- 设置div -->
 			
-			<swiper style="width: 100%;height: 190px;margin-top: 60px;"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+			<swiper style="width: 100%;height: 380rpx;margin-top:106rpx;"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
 			 interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
 			
 				<block wx:for="{{web_sliderData.mainImg}}" wx:index="{{index}}">
-					<swiper-item  style="width: 100%;height: 190px;" >
-						<image   style="width: 100%;height: 190px;"  mode="aspectFill" src="{{item.url}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+					<swiper-item  style="width: 100%;height: 380rpx;" >
+						<image   style="width: 100%;height: 380rpx;"  mode="aspectFill" src="{{item.url}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
 					</swiper-item>
 				</block>
 			</swiper>
@@ -27,10 +27,9 @@
 				<view class="search-to">
 					<image src="../../image/home-icon1.png"></image>
 					<input type="text" value="" placeholder="请输入您想要观看的课程" class="in" data-key="title" bindblur="changeBind"  value="{{web_sForm.title}}"/>
+          <view class="search-on"  bindtap="goSearch">搜索</view>
 				</view>
-				<view class="search-on"  bindtap="goSearch">
-					搜索
-				</view>
+				
 			</view>
 			<!-- 设置小图标 -->
 			<view class="xiaotb">
@@ -48,29 +47,33 @@
 			</view>
 			<!-- 设置公开课程 -->
 			
-			<view class="gong"  bindtap="intoPath" data-path="/pages/gongkai/gongkai">
-				<view class="gong-tu"></view>
-				<span class="gong-gk">公开课程</span>
+			<view class="bordT10 pdt40"  bindtap="intoPath" data-path="/pages/gongkai/gongkai">
+        <view class="oh">
+          <view class="gong-tu"></view>
+          <span class="gong-gk">公开课程</span>
+        </view>
 				<!-- 设置图片 -->
-				<view class="gong-img" >
+				<view class="" >
 					<image src="../../image/home-img1.png" class="tupian"></image>
 				</view>
 			</view>
 			<!-- 设置交流群 -->
-			<view bindtap="join">
+			<view bindtap="join" class="wxjlBtn">
 				<image src="../../image/home-icon10.png" class="jiao"></image>
 				<view class="liu">交流群</view>
 			</view>
 			<!-- 设置资讯文章 -->
-			<view class="zi">
-				<view class="gong-tu"></view>
-				<span class="gong-gk">资讯文章</span>
+			<view  class="bordT10 pdt40">
+        <view class="oh">
+          <view class="gong-tu"></view>
+          <span class="gong-gk">资讯文章</span>
+        </view>
 				<block wx:for="{{web_mainData}}" wx:key="id">
 					<view class="zixun" bindtap="intoPath" data-path="/pages/artDetail/artDetail?id={{item.id}}">
 						<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
 						<view class="zixun-div">
-							<view class="picker">{{item.title}}</view>
-							<view class="picker-top">{{item.description}}</view>
+							<view class="picker avoidOverflow">{{item.title}}</view>
+							<view class="picker-top avoidOverflow2">{{item.description}}</view>
 							<view class="picker-date">{{item.create_time}}</view>
 						</view>
 					</view>

@@ -2,12 +2,13 @@
 .border-line{
 	border: solid 1rpx #fff;
 }
+.bordT10{border-top:20rpx solid #f5f5f5;}
 .avoidOverflow{
 	overflow:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap;
 }
-
+.pr{ position: relative;}
 
 .avoidOverflow2{
  text-overflow:ellipsis;
@@ -16,6 +17,14 @@
  -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
  -webkit-box-orient:vertical;
 }
+
+.pdt20{padding-top: 20rpx;}
+.pdt30{padding-top: 30rpx;}
+.pdt40{padding-top: 40rpx;}
+.pdt50{padding-top: 50rpx;}
+
+.oh{ overflow:hidden;}
+
 .w700 {
 	width: 700rpx;
   margin: 0px auto;

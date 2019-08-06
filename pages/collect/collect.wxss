@@ -80,38 +80,54 @@ a{
 .foot-f{
 	position: relative;
 	border-top: 1px solid #f3f3f3;
-	width: 100%;
-	height: 135px;
+	height: 166rpx;
+  padding: 30rpx 0;
+  margin: 0 30rpx;
+  overflow: hidden;
 }
 .foot-f-z{
 	position: relative;
 	width: 100%;
 	height: 135px;
 }
+.left-pic{ 
+  width: 250rpx; 
+  height: 166rpx;
+  float: left;
+  border-radius: 8rpx;
+  overflow: hidden;
+  position: relative;
+}
 .foot-f-x{
-	position: relative;
-	left: 20px;
-	top: 15px;
-	width: 125px;
-	height: 83px;
+	width: 100%;
+	height: 100%;
+  display: block;
 }
 .foot-f-div{
-	position: absolute;
-	right: 3px;
-	top: 13px;
-	width: 200px;
-	height: 105px;
+	width: 440rpx;
+  padding-left: 20rpx;
+  box-sizing:border-box;
+	height: 166rpx;
+  float: left;
 
 }
 .picker{
-	margin-top: 10px;
-	font-size: 13px;
+	margin-top: 20rpx;
+	font-size: 28rpx;
+  line-height: 36rpx;
+  height: 72rpx;
+  overflow: hidden;
 }
 
 .picker-date{
-	font-size: 12px;
+	font-size: 24rpx;
 	color: #ff5d0e;
-	margin-top: 59px;
+	margin-top: 40rpx;
+}
+.picker-date::after{
+  content: "好评";
+  color: #222;
+  margin-left: 6rpx;
 }
 .picker-hp{
 	position: relative;
@@ -121,18 +137,16 @@ a{
 }
 .lucency{
 	position: absolute;
-	top: 95px;
-	left: 20px;
+	bottom: 0;
+	left: 0px;
 	z-index: 10;
-	background-color: #000000;
-	opacity: 0.5;
-	border-radius:0px 0px 10px 12px;
+	background-color: rgba(0,0,0,0.5);
 	color: #FFFFFF;
-	width: 125px;
-	height: 20px;
-	line-height: 20px;
+	width: 100%;
+	height: 40rpx;
+	line-height: 40rpx;
 	text-align: center;
-	font-size: 11px;
+	font-size: 22rpx;
 }
 
 .acti-top{

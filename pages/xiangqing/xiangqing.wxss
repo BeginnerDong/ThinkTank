@@ -15,7 +15,11 @@
 	padding: 10rpx 0;
 	font-size: 14px;
 }
-
+.xinxi .WxEmojiView{ 
+  display: inline-block;
+  padding-top: 0;
+  line-height: 40rpx;
+}
 .topTabSwiper {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
@@ -104,12 +108,14 @@
 	font-size: 14px;
 	line-height: 30px;
 	padding-left: 15px;
+  box-sizing: border-box;
 }
 .xinxi>view:nth-child(2){
 	width: 100%;
 	margin-top: 5px;
 	border-bottom: 1px solid #f6f6f6;
 	padding: 0 15px;
+  box-sizing: border-box;
 
 }
 .xinxi>view:nth-child(2) view{

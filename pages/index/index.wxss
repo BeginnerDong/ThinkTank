@@ -5,46 +5,47 @@ a{
 .acti-top{
 	
 }
+.indctbox{ padding-top:40rpx; }
 /* 设置头部 */
 .top-name{
 	width: 100%;
-	height: 60px;
 	background-color: #FFFFFF;
 	position: fixed;
 	top: 0px;
-	z-index: 999;
+	z-index: 666;
 }
 .top-name-top{
-	width: 92%;
-	height: 45px;
 	margin: auto;
-	
+  height: 66rpx;
+  padding: 20rpx 30rpx 20rpx 110rpx;
+  position: relative;
 }
 .tubiao{
-	margin-top: 10rpx;
-	width: 33px;
-	height: 33px;
+	width: 66rpx;
+	height: 66rpx;
 	background-color: #000000;
 	border-radius: 10rpx;
 	float: left;
 	clear: both;
+  position: absolute;
+  left: 30rpx;
+  top: 20rpx;
 }
 .zhi{
-	padding-left: 45px;
-	height: 24px;
-	font-size: 12px;
+	height: 33rpx;
+	font-size: 24rpx;
 	color: rgb(102,102,102);
 }
 .zhuce{
-	width: 65px;
-	height: 25px;
-	border-radius: 3px;
-	font-size: 12px;
+	width: 130rpx;
+	height: 50rpx;
+	border-radius: 6rpx;
+	font-size: 24rpx;
 	text-align: center;
-	line-height: 25px;
+	line-height: 50rpx;
 	position: absolute;
-	right: 25px;
-	top: 11px;
+	right: 30rpx;
+	top: 30rpx;
 	color: #FFFFFF;
 	background: linear-gradient(to right,#ff5d0e,#ffa70e);
 }
@@ -62,70 +63,73 @@ a{
 /* 设置搜索框 */
 .search{
 	position: absolute;
-	top: 235px;
+	top: 450rpx;
 	z-index: 200;
-	width: 118%;
-	height: 30px;
+	width: 100%;
+	height: 70rpx;
 }
 .search-on,.search-to{
 	box-shadow: #bbbbbb 1px 6px 10px 1px;
 }
 .search-to{
-	width: 60%;
-	height: 30px;
-	border-radius:100px 0px 0px 100px;
-	margin-left: 25px;
-	float: left;
+	width: 690rpx;
+	height: 66rpx;
+	border-radius:33rpx;
+	margin-left: 50%;
+	transform: translateX(-50%);
 	background-color: #fff;
+  position: relative;
+  padding-right: 112rpx;
+  box-sizing: border-box;
 }
 .search-to>image{
-	width: 15px;
-	height: 15px;
+	width: 32rpx;
+	height: 32rpx;
 	float: left;
 	clear: both;
-	margin-top: 10px;
-	margin-left: 15px;
+	margin-top: 17rpx;
+	margin-left: 30rpx;
 }
 .in{
 	width: 85%;
-	height: 40px;
+	height: 66rpx;
 	color: #000000;
-	margin-left: 45px;
-	margin-top: -4px;
-	font-size: 12px;
+	margin-left: 70rpx;
+	font-size: 24rpx;
 }
 .search-on{
-	width: 15%;
-	height: 30px;
-	border-radius:0px 100px 100px 0px;
-	margin-left: 290px;
+	width: 112rpx;
+	height: 66rpx;
+	border-radius:0px 40rpx 40rpx 0px;
+  float: left;
 	background: linear-gradient(to right,#ff5d0e,#ffa70e);
 	color: #FFFFFF;
 	text-align: center;
-	line-height: 30px;
-	font-size: 16px;
+	line-height: 66rpx;
+	font-size: 30rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
 	
 	
 }
 /* 设置小图标 */
 .xiaotb{
-	position: relative;
-	top: 10px;
-	width: 100%;
-	height: 180px;
-	margin-top: 25px;
+	height: 360rpx;
+	margin-top: 80rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .x{
-
-	float: left;
-	width: 93px;
-	height: 90px;
+	width: 25%;
+	height: 180rpx;
 	text-align: center;
-	
 }
 .img{
-	width: 45px;
-	height: 45px;
+	width: 90rpx;
+	height: 90rpx;
 	transition: all 0.5s linear;
 	transform: rotate(0deg);
 }
@@ -133,8 +137,8 @@ a{
 	transform: rotate(360deg);
 }
 .v{
-	font-size: 12px;
-	color: #777777;
+	font-size: 24rpx;
+	color: #666;
 }
 /*  设置公开课程 */
 .gong{
@@ -144,16 +148,17 @@ a{
 	height: 300px;
 }
 .gong-tu{
-	margin-left: 10px;
-	width: 4pt;
-	height: 18pt;
+	margin-left: 20rpx;
+	width: 8rpx;
+	height: 36rpx;
 	background-color:rgb(40,171,238);
 	float: left;
 }
 .gong-gk{
-	margin-left: 10px;
-	font-size: 15px;
+	margin-left: 20rpx;
+	font-size: 30rpx;
 	color: rgb(34,34,34);
+  float: left;
 }
 /*  设置图片*/
 .gong-img{
@@ -161,8 +166,11 @@ a{
 	top: 40px;
 }
 .tupian{
-	width: 375px;
-	height: 211px;
+	width: 100%;
+	height: 422rpx;
+  padding-top: 30rpx;
+  padding-bottom: 40rpx;
+  display: block;
 }
 /* 设置资讯文章 */
 .zi{
@@ -173,8 +181,11 @@ a{
 .zixun{
 	position: relative;
 	border-bottom: 1px solid #f3f3f3;
-	width: 100%;
-	height: 135px;
+  padding: 30rpx 0;
+  margin: 0 20rpx;
+  padding-bottom: 30rpx;
+	height: 166rpx;
+  overflow: hidden;
 }
 .zixun-z{
 	position: relative;
@@ -182,47 +193,50 @@ a{
 	height: 135px;
 }
 .zixun-x{
-	position: relative;
-	top: 15px;
-	left: 12px;
-	width: 150px;
-	height: 100px;
+	width: 250rpx;
+	height: 166rpx;
+  display: block;
+  float: left;
 }
 .zixun-div{
-	position: absolute;
-	right: 3px;
-	top: 13px;
-	width: 200px;
-	height: 105px;
-
+	width: 440rpx;
+	height: 166rpx;
+  float: left;
+  overflow: hidden;
+  padding-left: 20rpx;
 }
 .picker{
-	font-size: 13px;
+	font-size: 30rpx;
 	color: rgb(34,34,34);
 }
 .picker-top{
-	font-size: 11px;
+	font-size: 24rpx;
 	color: rgb(153,153,153);
-	margin-top: 13px;
+	margin-top: 20rpx;
+  line-height: 34rpx;
 }
 .picker-date{
-	font-size: 11px;
+	font-size: 24rpx;
 	color: rgb(153,153,153);
-	margin-top: 22px;
+	margin-top: 12rpx;
 }
+
 /* 设置交流群 */
-.jiao{
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	top: 710px;
+.wxjlBtn{
+  position: fixed;
+	top: 50%;
 	right: 0px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.jiao{
+	width: 100rpx;
+	height: 100rpx;
+  display: block;
 }
 .liu{
-	position: absolute;
-	top: 768px;
-	right: 5px;
-	font-size: 13px;
+	font-size: 26rpx;
+  line-height: 60rpx;
 }
 /* 设置脚部 */
 .foot{

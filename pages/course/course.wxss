@@ -3,85 +3,106 @@ a{
 }
 /*设置头部 搜索框*/
 .course{
-	position: relative;
-	top: 5px;
 	z-index: 200;
-	width: 123%;
-	height: 40px;
+	width: 100%;
+	height: 70rpx;
+  margin: 40rpx 0 20rpx 0;
 }
 .course-on,.course-to{
 	box-shadow: #bbbbbb 1px 0px 10px 1px;
 }
 .course-to{
-	width: 59%;
-	height: 30px;
-	border-radius:100px 0px 0px 100px;
-	margin-left: 10px;
-	float: left;
+	width: 690rpx;
+	height: 66rpx;
+	border-radius:34rpx;
+	margin-left: 50%;
+  transform: translateX(-50%);
 	background-color: rgb(255,255,255);
+  position: relative;
 }
+
 .course-to>image{
-	width: 20px;
-	height: 20px;
+	width: 32rpx;
+	height: 32rpx;
 	float: left;
 	clear: both;
-	margin-top: 6px;
-	margin-left: 17px;
+	margin-top: 20rpx;
+	margin-left: 28rpx;
+}
+.search-to>image{
+	width: 32rpx;
+	height: 32rpx;
+	float: left;
+	clear: both;
+	margin-top: 17rpx;
+	margin-left: 26rpx;
 }
 .in{
-	width: 200px;
-	height: 20px;
+	width: 400rpx;
+	height: 66rpx;
 	color: rgb(153,153,153);
-	margin-left: 50px;
-	margin-top: 3px;
-	font-size: 12px;
+	margin-left: 80rpx;
+	font-size: 24rpx;
 }
 .course-on{
-	width: 60px;
-	height: 30px;
-	border-radius:0px 100px 100px 0px;
-	margin-left: 281px;
+  width: 112rpx;
+	height: 66rpx;
+	border-radius:0px 40rpx 40rpx 0px;
 	background: linear-gradient(to right,#ff5d0e,#ffa70e);
 	color: #FFFFFF;
 	text-align: center;
-	line-height: 30px;
-	font-size: 14px;
+	line-height: 66rpx;
+	font-size: 30rpx;
+  position: absolute; 
+  right: 0; 
+  top: 0;
 }
 /* 设置人气 */
 .wwrr{
-	font-size: 13px;
+  width: 50%;
+  float: left;
+	font-size:28rpx;
 	color: rgb(34,34,34);
+  text-align: center;
+   height: 88rpx;
+   line-height: 88rpx;
 }
 .rrww{
 	width: 8px;
 	height: 6px;
+  margin-left: 10rpx;
 }
 .popularity{
-	width: 180px;
-	height: 44px;
-	line-height: 44px;
 	float: left;
 	clear: both;
-	
 }
 .evaluate{
-	width: 225px;
+	/* width: 225px;
 	height: 44px;
-	line-height: 44px;
+	line-height: 44px; */
 	
 }
 /* 设置第一个div */
 .foot{
-	width: 65%;
-	height: 45px;
+	width: 90%;
 	margin:auto;
 }
 /* 设置第二个div */
 .foot-f{
-	position: relative;
 	border-top: 1px solid #f3f3f3;
 	width: 100%;
-	height: 135px;
+	height: 228rpx;
+  padding:30rpx 40rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.left-pic{
+  width: 250rpx; 
+  height: 166rpx;
+  border-radius: 10rpx;
+  float: left;
+  overflow: hidden;
+  position: relative;
 }
 .foot-f-z{
 	position: relative;
@@ -89,50 +110,52 @@ a{
 	height: 135px;
 }
 .foot-f-x{
-	position: relative;
-	left: 20px;
-	top: 15px;
-	width: 125px;
-	height: 83px;
+	width: 100%;
+	height: 100%;
 }
 .foot-f-div{
-	position: absolute;
-	right: 3px;
-	top: 13px;
-	width: 200px;
-	height: 105px;
-
+	width: 420rpx;
+	height: 166rpx;
+  float: left;
+  box-sizing: border-box;
+  padding-left:30rpx;
 }
 .picker{
-	margin-top: 10px;
-	font-size: 13px;
+	margin-top: 16rpx;
+	font-size: 30rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
 }
 
 .picker-date{
-	font-size: 12px;
+	font-size: 26rpx;
 	color: #ff5d0e;
-	margin-top: 59px;
 }
-.picker-hp{
+.picker-date::after{
+  content: "好评";
+  margin-left:6rpx;
+  color: #222;
+}
+/* .picker-hp{
 	position: relative;
 	top: -16px;
 	right: -33px;
 	font-size: 12px;
-}
+} */
 .lucency{
 	position: absolute;
-	top: 95px;
-	left: 20px;
+	bottom: 0px;
+	left: 0px;
 	z-index: 10;
-	background-color: #000000;
-	opacity: 0.5;
-	border-radius:0px 0px 10px 12px;
+	background-color: rgba(0,0,0,0.5);
 	color: #FFFFFF;
-	width: 125px;
-	height: 20px;
-	line-height: 20px;
+	width: 100%;
+	height: 40rpx;
+	line-height:40rpx;
 	text-align: center;
-	font-size: 11px;
+	font-size: 22rpx;
 }
 
 .acti-top{

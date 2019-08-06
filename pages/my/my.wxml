@@ -13,33 +13,39 @@
 						<image src="../../image/coupons-icon3.png"></image>
 						<!-- 设置文字信息 -->
 						<view class="dahezi">
-							<view>￥</view>
-							<view>{{item.value}}</view>
-							<view>优惠券</view>
-							<view>{{item.start_time}}-{{item.end_time}}</view>
-							<view bindtap="couponAdd" data-index="{{index}}">立即领取</view>
+							<!-- <view>￥</view> -->
+							<view class="mny">{{item.value}}</view>
+              <view class="cent">
+                <view class="tit">优惠券</view>
+							  <view class="data">{{item.start_time}}~{{item.end_time}}</view>
+              </view>
+							<view class="takeBtn" bindtap="couponAdd" data-index="{{index}}">立即领取</view>
 						</view>
 					</view>
 					<view class='swiper_con' wx:if="{{currentData == 1}}">
 						<image src="../../image/coupons-icon3.png"></image>
 						<view class="dahezi">
-							<view>￥</view>
-							<view>{{item.value}}</view>
-							<view>优惠券</view>
-							<view>{{item.create_time}}-{{item.invalid_time}}</view>
-							<view>立即使用</view>
+							<!-- <view>￥</view> -->
+							<view class="mny">{{item.value}}</view>
+              <view class="cent">
+                <view class="tit">优惠券</view>
+							  <view class="data">{{item.create_time}}-{{item.invalid_time}}</view>
+              </view>
+							<view class="takeBtn">立即使用</view>
 						</view>
 					</view>
 					<view class='swiper_con' wx:if="{{currentData == 2}}">
 						<image src="../../image/coupons-icon3.png"></image>
 						<view class="dahezi">
-							<view>￥</view>
-							<view>{{item.value}}</view>
-							<view>优惠券</view>
-							<view>{{item.create_time}}-{{item.invalid_time}}</view>
-							<view>已经失效</view>
-							<image src="../../image/coupons-icon2.png" style="width: 45%;position: absolute;top: -27px;right: 93px;height: 147px;"></image>
+							<view class="mny">{{item.value}}</view>
+              <view class="cent">
+                <view class="tit">优惠券</view>
+							  <view class="data">{{item.create_time}}-{{item.invalid_time}}</view>
+              </view>
+							
+							<view class="takeBtn">已经失效</view>
 						</view>
+            <image src="../../image/coupons-icon2.png" style="width: 289rpx;height:278rpx;position: absolute;top: 2rpx;left:50%;transform:translateX(-50%)"></image>
 					</view>
 				</block>
 				

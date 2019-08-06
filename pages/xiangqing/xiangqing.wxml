@@ -20,7 +20,7 @@
 					<view class="xinxi">
 						<!-- 设置内容 -->
 						<view>课程信息</view>
-						<view>
+						<view style="padding-bottom:10rpx;">
 							<view>课程名称：{{web_mainData.title}}</view>
 							<view>课程难度：{{web_mainData.difficulty}}</view>
 							<view>课程时长：{{web_mainData.times}}</view>

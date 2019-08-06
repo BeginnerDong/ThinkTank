@@ -27,11 +27,10 @@
   padding: 0;
 }
 .ql-editor {
-  box-sizing: border-box;
   line-height: 1.42;
   height: 100%;
   outline: none;
-  
+  box-sizing:border-box;
   padding: 12px 15px;
   tab-size: 4;
   -moz-tab-size: 4;

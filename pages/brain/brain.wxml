@@ -11,12 +11,12 @@
 				</view>
 			</view>
 			<!-- 设置大图片 -->
-			<view wx:if="{{num==1&&web_userData.info.level==0}}">
-				<image src="../../image/thethinktank-img1.png" class="nanshi"></image>
-				<view class="link">
-					<view class="ll">会员链接:http://hao.360.com/</view>
-					<view class="goumai"  bindtap="intoPath" data-path="/pages/second/second">购买会员</view>
-				</view>
+			<view class="pr" wx:if="{{num==1&&web_userData.info.level==0}}">
+          <image src="../../image/thethinktank-img1.png" class="nanshi"></image>
+          <view class="link">
+            <view class="ll">会员链接:http://hao.360.com/</view>
+            <view class="goumai"  bindtap="intoPath" data-path="/pages/second/second">购买会员</view>
+          </view>
 			</view>
 			<view wx:if="{{web_userData.info.level!=0}}">
 				<view class="acti">
@@ -30,7 +30,7 @@
 									<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
 									<view class="zixun-div">
 										<picker class="picker">{{item.title}}</picker>
-										<picker class="picker-top">{{item.description}}</picker>
+										<picker class="picker-top avoidOverflow2">{{item.description}}</picker>
 										<picker class="picker-date">{{item.create_time}}</picker>
 									</view>
 								</view>
@@ -40,19 +40,22 @@
 						<view class="ci">
 							<view class="gong-tu"></view>
 							<span class="gong-gk">视频</span>	
-							<block wx:for="{{web_mainData}}">
-								<view class="foot-f" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
-									<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
-									<view class="lucency">
-										{{item.description}}
-									</view>
-									<view class="foot-f-div">
-										<picker class="pickerr">{{item.title}}</picker>
-										<view class="picker-datete">{{item.view_count}}</view>
-										<view class="picker-hp">人已学习</view>
-									</view>
-								</view>
-							</block>
+              <view class="videoList">
+                <block wx:for="{{web_mainData}}">
+                  <view class="foot-f" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
+                    <view class="left-pic">
+                      <image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
+                      <view class="lucency avoidOverflow">{{item.description}}</view>
+                    </view>
+                    <view class="foot-f-div">
+                      <picker class="pickerr avoidOverflow">{{item.title}}</picker>
+                      <view class="picker-datete">{{item.view_count}}</view>
+                      <!-- <view class="picker-hp">人已学习</view> -->
+                    </view>
+                  </view>
+                </block>
+              </view>
+							
 							
 							
 						</view>
@@ -61,7 +64,7 @@
 					</view>
 				</view>
 			</view>
-			<view wx:if="{{num==2&&web_userData.info.level!=2}}">
+			<view class="pr" wx:if="{{num==2&&web_userData.info.level!=2}}">
 				<image src="../../image/thethinktank-img2.png" class="nanshi"></image>
 				<view class="link">
 					<view class="ll">会员链接:http://hao.360.com/</view>

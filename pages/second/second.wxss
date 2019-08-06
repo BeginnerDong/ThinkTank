@@ -1,62 +1,63 @@
 /* 设置第一个div */
 .block{
-	margin-top: 20px;
-	margin-left: 35px;
-	width: 80%;
-	height: 265px;
-	border-radius: 23px;
+	margin: 20px auto 0 auto;
+	width: 90%;
+	height: 530rpx;
+	border-radius: 40rpx;
 }
 .block>image{
 	width: 100%;
-	height: 190px;
+	height: 380rpx;
 }
 /* 设置里面div */
 .embed{
-	margin-left: 4px;
+	margin:-20rpx auto 0 auto;
 	margin-top: -10px;
 	width: 97.5%;
-	height: 80px;
-	border-radius: 0px 0px 23px 23px ;
+	height: 140rpx;
+	border-radius: 0px 0px 40rpx 40rpx ;
 	background-color: #f6f6f6;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  overflow: hidden;
 }
 .jiaru{
-	width: 70%;
-	height: 45px;
-	font-size: 14px;
-	line-height: 45px;
-	margin-left: 20px;
+	width: 100%;
+  box-sizing: border-box;
+	height: 80rpx;
+	font-size: 30rpx;
+	line-height: 80rpx;
 }
 .rmb{
-	width: 33%;
-	height: 32px;
-	font-size: 14px;
-	line-height: 20px;
-	text-align: center;
+	width: 100%;
+	height: 60rpx;
+	font-size: 28rpx;
+	line-height: 30rpx;
 	color: red;
 }
 .kait{
-	width: 55px;
-	height: 25px;
-	border-radius: 3px;
-	font-size: 12px;
+	width: 110rpx;
+	height: 50rpx;
+	border-radius: 6rpx;
+	font-size:24rpx;
 	text-align: center;
-	line-height: 25px;
+	line-height: 50rpx;
 	position: absolute;
-	right: 28px;
-	top: 40px;
+	right: 56rpx;
+	top: 80rpx;
 	color: #FFFFFF;
 	 background: linear-gradient(to right,#ff5d0e,#ffa70e);
 }
 .kaitt{
-	width: 55px;
-	height: 25px;
-	border-radius: 3px;
-	font-size: 12px;
+	width: 110rpx;
+	height: 50rpx;
+	border-radius: 6rpx;
+	font-size: 24rpx;
 	text-align: center;
-	line-height: 25px;
+	line-height: 50rpx;
 	position: absolute;
-	right: 72px;
-	top: 525px;
+	right: 144rpx;
+	top: 1050px;
 	color: #FFFFFF;
 	background: linear-gradient(to right,#ff5d0e,#ffa70e);
 }

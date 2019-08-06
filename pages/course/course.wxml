@@ -6,14 +6,13 @@
 				<view class="course-to">
 					<image src="../../image/home-icon1.png"></image>
 					<input type="text" value="" placeholder="请输入您想要观看的课程" class="in" data-key="title" bindblur="changeBind"  value="{{web_sForm.title}}"/>
-				</view>
-				<view class="course-on" bindtap="goSearch">
-					搜索
-				</view>
+          <view class="course-on" bindtap="goSearch">搜索</view>
+        </view>
+				
 			</view>
 			<!-- 设置第一个div -->
 			<view class="foot">
-				<view class="popularity wwrr" bindtap="changeOrder" data-key="view_count">人气<image src="../../image/course-icon1.png" class="rrww"></image>
+				<view class="popularity wwrr" bindtap="changeOrder" data-key="view_count">人气 <image src="../../image/course-icon1.png" class="rrww"></image>
 				</view>
 				<view class="evaluate wwrr" bindtap="changeOrder" data-key="score">评价<image src="../../image/course-icon1.png" class="rrww"></image>
 				</view>
@@ -21,14 +20,14 @@
 			<!-- 设置第二个div -->
 			<block wx:for="{{web_mainData}}">
 				<view class="foot-f" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
-					<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
-					<view class="lucency">
-						{{item.view_count}}人已学习
-					</view>
+          <view class="left-pic">
+            <image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
+            <view class="lucency">{{item.view_count}}人已学习</view>
+          </view>
 					<view class="foot-f-div">
-						<picker class="picker">{{item.title}}</picker>
+						<picker class="picker avoidOverflow2">{{item.title}}</picker>
 						<view class="picker-date">{{item.score}}%</view>
-						<view class="picker-hp">好评</view>
+						<!-- <view class="picker-hp">好评</view> -->
 					</view>
 				</view>
 			</block>
