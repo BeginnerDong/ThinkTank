@@ -6,9 +6,8 @@
 				<!-- 设置图像人物 -->
 				<view class="image">
 					<view style="height: 120rpx;">
-						<image src="{{web_mainData.headImgUrl}}" style="border-radius:50%;width: 60px;height: 60px;"></image>
+						<image src="{{web_mainData.headImgUrl}}" style="border-radius:50%;width: 120rpx;height: 120rpx;"></image>
 					</view>
-					
 					<view class="nic ni">{{web_mainData.nickname}}</view>
 					<view class="nix ni">学号：{{web_mainData.user_no}}</view>
 				</view>
@@ -16,44 +15,32 @@
 			<!-- 设置内容 -->
 			<view class="set">
 				<view class="one" bindtap="intoPath" data-path="/pages/second/second">
-					<view style="height: 20px;"></view>
 					<view class="one-q">
 						<image src="../../image/about-icon1.png" class="g"></image>
 					</view>
 					<view class="hui" >购买会员</view>
-					<view class="one-z">
-						<image src="../../image/thearrow-icon.png" class="l"></image>
-					</view>
+					<image src="../../image/thearrow-icon.png" class="l"></image>
 				</view>
 				<view class="one" data-path="/pages/foot/foot" bindtap="intoPath">
-					<view style="height: 20px;"></view>
 					<view class="one-q">
 						<image src="../../image/about-icon2.png" class="g"></image>
 					</view>
 					<view class="hui">浏览记录</view>
-					<view class="one-z">
-						<image src="../../image/thearrow-icon.png" class="l"></image>
-					</view>
+					<image src="../../image/thearrow-icon.png" class="l"></image>
 				</view>
 				<view class="one" data-path="/pages/collect/collect" bindtap="intoPath">
-					<view style="height: 20px;"></view>
 					<view class="one-q">
 						<image src="../../image/about-icon3.png" class="g"></image>
 					</view>
 					<view class="hui">我的收藏</view>
-					<view class="one-z">
-						<image src="../../image/thearrow-icon.png" class="l"></image>
-					</view>
+					<image src="../../image/thearrow-icon.png" class="l"></image>
 				</view>
-				<view class="one-e" bindtap="intoPath" data-path="/pages/my/my">
-					<view style="height: 20px;"></view>
+				<view class="one" bindtap="intoPath" data-path="/pages/my/my">
 					<view class="one-q">
 						<image src="../../image/about-icon4.png" class="g"></image>
 					</view>
 					<view class="hui" >我的优惠劵</view>
-					<view class="one-z">
-						<image src="../../image/thearrow-icon.png" class="l"></image>
-					</view>
+					<image src="../../image/thearrow-icon.png" class="l"></image>
 				</view>
 			</view>
 			<!-- 设置会员等级 -->

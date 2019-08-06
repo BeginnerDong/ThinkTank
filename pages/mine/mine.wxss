@@ -6,15 +6,14 @@ a{
 .colour{
 	border: 1px solid #ff5d0e;
 	width: 100%;
-	height: 220px;
+	height: 440rpx;
 	background-color: #ff5d0e;
 }
 /* 设置图像人物 */
 .image{
-
 	width: 100%;
-	height: 160px;
-	margin-top: 30px;
+	/* height: 160px; */
+	margin-top: 60rpx;
 	text-align: center;
 }
 .image>image{
@@ -26,76 +25,87 @@ a{
 }
 .nic{
 	height: 55px;
-	font-size: 13px;
-	line-height: 50px;
+	font-size: 26rpx;
+	line-height: 100rpx;
 }
 .nix{
-	font-size: 14px;
+	font-size: 28rpx;
 }
 .set{
 	width: 100%;
-	height: 220px;
-	margin-top: 30px;
+	height: 440rpx;
+	margin-top: 90rpx;
 }
 .g{
-	width: 20px;
-	height: 20px;
-	
+	width: 40rpx;
+	height: 40rpx;
+  display: block; 
+  float: left;
 }
 .l{
-	width: 6px;
-	height: 15px;
-	
+	width: 14rpx;
+	height: 28rpx;
+}
+.one .l{
+  position: absolute; 
+  right: 0; 
+  top: 50%; 
+  transform: translateY(-50%);
 }
 .one-q{
-	width: 40px;
-	height: 40px;
+	width: 60rpx;
+	height: 40rpx;
 	float: left;
 	clear: both;
 }
 .one-z{
-	width: 15px;
-	height: -12px;
-	margin-top: -23px;
-	padding-left: 330px;
+	width: 30rpx;
+	height: -24rpx;
+	margin-top: -26rpx;
+	padding-left: 660rpx;
 }
 .hui{
-	font-size: 14px;
+	font-size: 30rpx;
 	color: rgb(34,34,34);
-	padding-left: 30px;
+  float: left;
 }
 .one{
-	border-bottom: 1px solid #BBBBBB;
+	border-bottom: 2rpx solid #eee;
 	margin: auto;
 	width: 90%;
-	height: 60px;
+	/* height: 120rpx; */
+  overflow: hidden;
+  padding: 40rpx 0;
+  position: relative;
 }
 .one-e{
 	margin: auto;
 	width: 90%;
-	height: 60px;
+	height: 120rpx;
 }
 
 /* 设置会员等级 */
 .vip{
 	width: 90%;
-	height: 68px;
+	height: 136rpx;
 	position: absolute;
-	top: 185px;
-	left: 15px;
-	border-radius: 10px;
-	background-color: #f7f4f4;
+	top: 370rpx;
+	left: 5%;
+	border-radius: 20rpx;
+	background-color: #fff;
 	text-align: center;
+  box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.3);
 }
 .vip-h{
-	font-size: 12px;
+	font-size: 24rpx;
 	color: rgb(102,102,102);
-	height: 32px;
-	line-height: 32px;
+	height: 64rpx;
+	line-height: 64rpx;
+  padding-top: 10rpx;
 }
 .vip-z{
-	font-size: 13px;
+	font-size: 26px;
 	color: rgb(34,34,34);
-	height: 32px;
-	line-height: 32px;
+	height: 64rpx;
+	line-height: 64rpx;
 }

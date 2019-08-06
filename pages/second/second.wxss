@@ -1,24 +1,25 @@
 /* 设置第一个div */
 .block{
-	margin: 20px auto 0 auto;
+	margin: 50rpx auto 0 auto;
 	width: 90%;
 	height: 530rpx;
 	border-radius: 40rpx;
+  overflow: hidden;
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+
 }
 .block>image{
 	width: 100%;
 	height: 380rpx;
+  display: block;
 }
 /* 设置里面div */
 .embed{
-	margin:-20rpx auto 0 auto;
-	margin-top: -10px;
-	width: 97.5%;
-	height: 140rpx;
+	width: 100%;
+	height: 150rpx;
 	border-radius: 0px 0px 40rpx 40rpx ;
-	background-color: #f6f6f6;
   box-sizing: border-box;
-  padding-left: 20rpx;
+  padding:0 30rpx;
   overflow: hidden;
 }
 .jiaru{
@@ -30,9 +31,9 @@
 }
 .rmb{
 	width: 100%;
-	height: 60rpx;
+	height: 40rpx;
 	font-size: 28rpx;
-	line-height: 30rpx;
+	line-height: 40rpx;
 	color: red;
 }
 .kait{

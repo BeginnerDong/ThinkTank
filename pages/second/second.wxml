@@ -8,7 +8,7 @@
 					<image src="{{item.mainImg[0].url}}"></image>
 					<!-- 设置里面的div -->
 					<view class="embed" style="position: relative;">
-						<view class="jiaru">{{item.title}}</view>
+						<view class="jiaru avoidOverflow">{{item.title}}</view>
 						<view class="rmb">{{item.price}}元</view>
 						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="续期" wx:if="{{web_userData.info.level==item.level}}">续期</view>
 						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="开通" wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==2}}">开通</view>

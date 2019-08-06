@@ -12,8 +12,8 @@
 	float: left;
 	width: 33.3333%;
 	text-align: center;
-	padding: 10rpx 0;
-	font-size: 14px;
+  line-height: 90rpx;
+	font-size: 30rpx;
 }
 .xinxi .WxEmojiView{ 
   display: inline-block;
@@ -103,11 +103,11 @@
 }
 .xinxi>view:nth-child(1){
 	width: 100%;
-	height: 30px;
+	height: 80rpx;
 	background-color: rgb(210,246,245);
-	font-size: 14px;
-	line-height: 30px;
-	padding-left: 15px;
+	font-size: 30rpx;
+	line-height: 80rpx;
+	padding-left: 30rpx;
   box-sizing: border-box;
 }
 .xinxi>view:nth-child(2){
@@ -119,70 +119,81 @@
 
 }
 .xinxi>view:nth-child(2) view{
-	font-size: 13px;
+	font-size: 28rpx;
 	color: rgb(102,102,102);
-	padding-top: 7px;
+	padding-top: 14rpx;
 }
 .span{
-	height: 35px;
-	line-height: 35px;
+	height: 70rpx;
+	line-height: 70rpx;
 	width: 14%;
 	position: relative;
-	top:-12px;
+	top:-24rpx;
 	display: inline-block;
 	text-align: center;
+  margin-left: 10rpx;
 }
 .shijin{
 	width: 18%;
-	height: 23px;
+	height: 46rpx;
 
 }
 
 .spann{
-	height: 35px;
-	line-height: 35px;
+	height: 70rpx;
+	line-height: 70rpx;
 	width: 63%;
 	
 }
 .one-two{
-	font-size:13px;
+	font-size:26rpx;
 	color:rgb(102,102,102);
-	padding-top:65px;
-	padding-left: 15px;
+	padding-top:130rpx;
+	padding-left: 30rpx;
 
 }
 .img-one{
-	width: 5%;
-	height: 20px;
+	width: 40rpx;
+	height: 40rpx;
 	position: relative;
-	top: 5px;
-	left: -5px;
+	top: 10rpx;
+	left: -10rpx;
 }
 /* 目录 */
 .public{
 	width: 100%;
-	height: 35px;
-	font-size: 13px;
+	height: 100rpx;
+  line-height: 100rpx;
+	font-size: 28rpx;
 	color: rgb(102,102,102);
-	padding-top: 7px;
-	border-bottom: 1px solid #f3f3f3;
+	border-bottom: 2rpx solid #f3f3f3;
+  position: relative;
+  overflow: hidden;
+  padding-left:50rpx;
 }
+/* .mululis{
+} */
 .ing{
-	width: 2%;
-	height: 11px;
+	width: 24rpx;
+	height: 24rpx;
+  float: left;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .inh{
 	width: 55%;
-	height: 30px;
-	margin-left: 20px;
-	margin-top: -31px;
+	/* height: 100rpx; */
+	margin-left: 10rpx;
+	float: left;
 }
 .xinx{
 	width: 100%;
-	height: 30px;
-	margin-top: 5px;
-	background-color: rgb(210,246,245);
-	font-size: 14px;
-	line-height: 30px;
-	padding-left: 15px;
+	/* height: 80rpx; */
+	margin-top:10rpx;
+	/* background-color: rgb(210,246,245); */
+	font-size: 28rpx;
+	line-height: 80rpx;
+	padding-left: 30rpx;
 }
