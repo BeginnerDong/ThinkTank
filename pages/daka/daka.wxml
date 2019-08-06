@@ -3,8 +3,10 @@
 		<view class="acti-top">
 			<!-- 设置资讯文章 -->
 			<view class="zi">
-				<view class="gong-tu"></view>
-				<span class="gong-gk">文章</span>
+        <view class="oh">
+          <view class="gong-tu"></view>
+          <view class="gong-gk">文章</view>
+        </view>
 					<block wx:for="{{web_artData}}" wx:key="id">
 					<view class="zixun">
 						<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
@@ -18,8 +20,10 @@
 				
 			</view>
 			<view class="ci">
-				<view class="gong-tu"></view>
-				<span class="gong-gk">视频</span>	
+        <view class="oh">
+          <view class="gong-tu"></view>
+          <view class="gong-gk">视频</view>
+        </view>	
         <view class="videoList">
           <block wx:for="{{web_mainData}}">
             <view class="foot-f" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
