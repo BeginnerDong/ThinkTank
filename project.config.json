@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wx25183056d3ad5d31",
+	"appid": "wxa9458b7334c5cbab",
 	"projectname": "%E6%99%BA%E5%9B%8A%E5%9B%A2",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 80,
+			"current": 85,
 			"list": [
 				{
 					"id": -1,
@@ -587,6 +587,41 @@
 					"id": -1,
 					"name": "pages/pingjia/pingjia",
 					"pathName": "pages/pingjia/pingjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiangqing/xiangqing",
+					"pathName": "pages/xiangqing/xiangqing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/second/second",
+					"pathName": "pages/second/second",
 					"query": "",
 					"scene": null
 				},

@@ -14,11 +14,11 @@ a{
 .nanshi{
 	width: 100%;
 	height: 1018rpx;
+  display: block;
 }
 .zhin{
 	border-bottom: 6rpx solid rgb(40,171,238);
 	color: rgb(40,171,238);
-
 }
 .zuanshi{
 	line-height: 82rpx;

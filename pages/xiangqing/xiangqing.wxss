@@ -133,16 +133,25 @@
 	text-align: center;
   margin-left: 10rpx;
 }
-.shijin{
+.xinxi .shijin{
 	width: 18%;
 	height: 46rpx;
-
+  font-size: 24rpx!important;
+  color: rgb(102,102,102);
+  text-align: right;
 }
-
+.pltext{
+  line-height: 40rpx;
+  font-size: 26rpx;
+  padding: 20rpx 0;
+  color: #666;
+}
 .spann{
 	height: 70rpx;
 	line-height: 70rpx;
 	width: 63%;
+  font-size: 28rpx;
+  color: #222;
 	
 }
 .one-two{

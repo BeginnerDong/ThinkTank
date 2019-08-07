@@ -37,15 +37,15 @@
 	color: red;
 }
 .kait{
-	width: 110rpx;
+	width: 140rpx;
 	height: 50rpx;
 	border-radius: 6rpx;
-	font-size:24rpx;
+	font-size:28rpx;
 	text-align: center;
 	line-height: 50rpx;
 	position: absolute;
-	right: 56rpx;
-	top: 80rpx;
+	right: 50rpx;
+	top: 70rpx;
 	color: #FFFFFF;
 	 background: linear-gradient(to right,#ff5d0e,#ffa70e);
 }

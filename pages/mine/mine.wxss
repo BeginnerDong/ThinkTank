@@ -97,14 +97,14 @@ a{
   box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.3);
 }
 .vip-h{
-	font-size: 24rpx;
+	font-size: 26rpx;
 	color: rgb(102,102,102);
-	height: 64rpx;
-	line-height: 64rpx;
+	height: 54rpx;
+	line-height: 54rpx;
   padding-top: 10rpx;
 }
 .vip-z{
-	font-size: 26px;
+	font-size: 28rpx;
 	color: rgb(34,34,34);
 	height: 64rpx;
 	line-height: 64rpx;

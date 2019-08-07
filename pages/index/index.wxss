@@ -228,6 +228,7 @@ a{
 	right: 0px;
   transform: translateY(-50%);
   text-align: center;
+  z-index: 555;
 }
 .jiao{
 	width: 100rpx;

@@ -21,8 +21,7 @@
 			
 			
 			<!-- 设置贵宾通道 -->
-			<view class="guibing"  bindtap="intoPath" data-path="/pages/lnvitation/lnvitation" wx:if="{{web_userData.info.level==0}}">
-				贵宾邀请码通道
+			<view class="guibing"  bindtap="intoPath" data-path="/pages/lnvitation/lnvitation" wx:if="{{web_userData.info.level==0}}">贵宾邀请码通道
 			</view>
 		</view>
 	</view>

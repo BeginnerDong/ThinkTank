@@ -70,15 +70,14 @@
 						<view style="text-align: center;height: 80rpx;line-height: 80rpx;">有什么想说的呢？赶紧
 						<span bindtap="intoPath" data-path="/pages/pingjia/pingjia?id={{web_mainData.id}}" style="display: inline-block;background-color: #00BFFF;color: #FFFFFF;height: 60rpx;margin-top:10rpx;line-height: 60rpx;padding:0 20rpx;border-radius:6rpx;">去评价</span>吧~</view>
 						<block wx:for="{{web_messageData}}" wx:key="id">
-							<view>
+							<view class="" style="padding:0 20rpx; margin-top:20rpx; box-sizing:border-box;border-bottom:1px solid #f6f6f6;">
 								<view style="display: flex;align-items: center;">
-									<image src="{{item.user.headImgUrl}}" style="width: 10%;height: 74rpx;border-radius:50%">
+									<image src="{{item.user.headImgUrl}}" style="width: 66rpx;height: 66rpx;border-radius:50%">
 										
 									</image><span class="spann" style="margin-left:10rpx;width:50%;">{{item.user.nickname}}</span>
 									<view class="shijin" style="padding: 0;width: 40%;">{{item.create_time}}</view>
 								</view>
-								<view>{{item.content}}</view>
-								
+								<view class="pltext">{{item.content}}</view>
 							</view>
 						</block>
 					</view>
