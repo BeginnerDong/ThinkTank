@@ -91,6 +91,18 @@ Page({
 		postData.searchItem = {
 			thirdapp_id: getApp().globalData.thirdapp_id,
 		};
+		postData.getAfter = {
+			userCoupon:{
+				token:wx.getStorageSync('token'),
+				tableName:'UserCoupon',
+				middleKey:'coupon_no',
+				key:'coupon_no',
+				searchItem:{
+					status:1
+				},
+				condition:'='
+			}
+		};
 		const callback = (res) => {
 			api.buttonCanClick(self,true);
 			if (res.info.data.length > 0) {
@@ -133,7 +145,12 @@ Page({
 			api.buttonCanClick(self, true);
 			if (res && res.solely_code == 100000) {
 				api.showToast('领取成功！', 'none', 2000)
-	
+				self.data.currentData = 1;
+				self.data.searchItem.use_step =1;
+				self.getMainDataTwo(true)
+				self.setData({
+					currentData:self.data.currentData
+				})
 			} else {
 				api.showToast(res.msg, 'none')
 			}

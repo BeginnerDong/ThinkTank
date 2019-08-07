@@ -4,7 +4,14 @@
 			<!-- 设置头部 -->
 			
 			<view style="width: 100%;height: 380px;">
-				<video   style="width: 100%;height: 380px;" src="{{web_chooseSku.bannerImg[0].url}}" ></video>
+				<video custom-cache="{{false}}" controls show-center-play-btn="{{false}}"  style="width: 100%;height: 380px;" src="{{web_chooseSku.bannerImg[0].url}}" bindtap="vedioPlay" data-id="{{web_chooseSku.bannerImg[0].url}}">
+					
+					<view style="width: 100%;height: 100%;position: absolute;top: 0;" wx:if="{{web_playId!=web_chooseSku.bannerImg[0].url}}" >
+						<image src="{{web_chooseSku.mainImg[0].url}}" style="width: 100%;height: 380px;"></image>
+						<image src="/image/coursevideo-icon.png"
+						  style="width: 100rpx;height: 100rpx;position: absolute;top: 44%;left: 44%;z-index: 9999;"></image>
+					</view>
+				</video>
 			</view>
 			<view>
 				<view class='topTabSwiper'>
@@ -56,7 +63,7 @@
 						<block wx:for="{{web_mainData.sku}}" wx:key="id">
 							<view class="public" bindtap="chooseSku" data-index="{{index}}">
 								<image src="../../image/coursevoice-icon1.png" class="ing"></image>
-								<view class="inh">{{item.title}}</view>
+								<view class="inh" style="{{web_chooseSku.id==item.id?'color: rgb(40,171,238)':''}}">{{item.title}}</view>
 							</view>					
 						</block>
 					</view>

@@ -130,17 +130,38 @@ Page({
 		const callback = (res) => {
 			if (res.info.data.length > 0) {
 				self.data.messageData.push.apply(self.data.messageData, res.info.data);
-				self.data.total = res.info.total
+				
 			} else {
 				self.data.isLoadAll = true;
-				api.showToast('没有更多了', 'none');
+				
 			};
 			self.setData({
-				web_total:self.data.total,
+				web_total:res.info.total,
 				web_messageData: self.data.messageData,
 			});
 		};
 		api.messageGet(postData, callback);
+	},
+	
+	vedioPlay(e) {
+		const self = this;
+	
+		var videoId = api.getDataSet(e,'id');
+		console.log(videoId)
+		if (videoId && self.data.playId != videoId) {
+			if (self.data.playId) {
+				var videoContextPrev = wx.createVideoContext(self.data.playId)
+				videoContextPrev.pause();
+			};
+			self.data.playId = videoId;
+			var videoContextNext = wx.createVideoContext(self.data.playId)
+			console.log(videoContextNext)
+			videoContextNext.play();
+			self.setData({
+				web_playId: self.data.playId
+			})
+		};
+	
 	},
 	
 	chooseSku(e){

@@ -231,8 +231,8 @@ Page({
 	submit() {
 		const self = this;
 		api.buttonCanClick(self);
-		var phone = self.data.sForm.phone;
-		const pass = api.checkComplete(self.data.sForm);
+		var phone = self.data.submitData.phone;
+		const pass = api.checkComplete(self.data.submitData);
 		if (pass) {
 			if (phone.trim().length != 11 || !/^1[3|4|5|6|7|8|9]\d{9}$/.test(phone)) {
 				api.buttonCanClick(self, true);

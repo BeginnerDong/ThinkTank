@@ -14,7 +14,7 @@ Page({
 		mainData: [],
 		getBefore: {},
 		num: 1,
-		isFirstLoadAllStandard: ['getMainData', 'getArtData'],
+		isFirstLoadAllStandard: ['getMainData', 'getArtData','getLabelData'],
 	},
 
 	onLoad(options) {
@@ -45,7 +45,8 @@ Page({
 		};
 		self.getMainData();
 		self.getArtData();
-		self.getUserData()
+		self.getUserData();
+		self.getLabelData()
 	},
 	
 	changeType(e){
@@ -87,6 +88,26 @@ Page({
 		  });  
 		};
 		api.userGet(postData,callback)
+	},
+	
+	getLabelData(){
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			title:'会员主图'
+		}
+		const callback = (res)=>{
+		  if(res.solely_code==100000){
+		    self.data.labelData = res.info.data[0]
+		  }else{
+		    api.showToast('网络故障','none')
+		  }
+		  api.checkLoadAll(self.data.isFirstLoadAllStandard,'getLabelData',self);
+		  self.setData({
+		    web_labelData:self.data.labelData,
+		  });  
+		};
+		api.labelGet(postData,callback)
 	},
 
 	getArtData() {

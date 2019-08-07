@@ -236,10 +236,7 @@ a{
 	text-align: center;
 }
 
-.nav_img image {
-	width: 58rpx;
-	height: 58rpx;
-}
+
 
 .acti-top {
 

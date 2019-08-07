@@ -3,7 +3,7 @@
 		<view class="acti-top">
 			<!-- 设置资讯文章 -->
 			<block wx:for="{{web_mainData}}" wx:key="id">
-				<view class="zi">
+				<view class="zi"  bindtap="intoPath" data-path="/pages/artDetail/artDetail?id={{item.id}}">
 					<view class="zixun">
 						<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
 						<view class="zixun-div">
