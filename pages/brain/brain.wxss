@@ -140,14 +140,15 @@ a{
 
 /* 设置第二个div */
 
-.foot-f {
+/* .foot-f {
 	position: relative;
-	width: 330rpx;
-	height: 220rpx;
+	width: 340rpx;
+	height: 230rpx;
   overflow: hidden;
   float: left;
-  margin: 0 12rpx 20rpx 12rpx;
-}
+  margin: 0 0rpx 20rpx 0rpx;
+} */
+.left-pic{ width: 344rpx; height: 228rpx; border-radius: 8rpx; overflow: hidden; position: relative;}
 .foot-ff {
 	position: relative;
 	left: 180px;
@@ -175,7 +176,7 @@ a{
 	width: 100%;
 	height: 135px;
 }
-.left-pic{ width: 330rpx; height: 220rpx; border-radius: 8rpx; overflow: hidden; position: relative;}
+
 .foot-f-x {
 	width: 100%;
 	height: 100%;
@@ -212,8 +213,11 @@ a{
 	color: #A1A1A1;
 }
 .videoList{
-  padding:20rpx; 
-  overflow: hidden
+  /* padding:20rpx;  */
+  width:94%;
+  margin:0 auto;
+  overflow: hidden;
+  padding: 20rpx 0;
 }
 
 .lucency {
