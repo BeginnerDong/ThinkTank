@@ -20,7 +20,11 @@ Page({
 	onLoad() {
 		const self = this;
 		api.commonInit(self);
-	
+		self.data.now =  Date.parse(new Date())/1000;
+		console.log(self.data.now);
+		self.setData({
+			web_now:self.data.now
+		})
 	},
 	
 	onShow(){

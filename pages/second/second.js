@@ -71,7 +71,7 @@ Page({
 				id: self.data.mainData[index].id,
 				count: 1
 			}, ],
-			type: 2
+			type: 1
 		}, ]
 		const callback = (res) => {
 			if (res && res.solely_code == 100000) {

@@ -80,7 +80,7 @@
 				</block>			
 			</view>
 			
-			<view style="height: 100%;width: 100%;background: black;opacity: 0.6;position: fixed;top: 0;z-index:1000" wx:if="{{isBind||isGroup}}" bindtap="close">
+			<view style="height: 100%;width: 100%;background: black;opacity: 0.6;position: fixed;top: 0;z-index:1000" wx:if="{{isBind||isGroup}}">
 				
 			</view>
 			<view style="width: 80%;height: 60%;position: fixed;top:20%;left:10%;background: #fff;z-index:1002;border-radius: 20rpx;" wx:if="{{isGroup}}">

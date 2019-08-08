@@ -58,7 +58,7 @@ Page({
 	goSearch(){
 		const self = this;
 		if(self.data.sForm.title!=''){
-			api.pathTo('/pages/search/search?title='+self.data.sForm.title,'nav')
+			api.pathTo('/pages/search/search?title='+self.data.sForm.title+'&type=part','nav')
 		}else{
 			api.showToast('请输入名称搜索','none')
 		}

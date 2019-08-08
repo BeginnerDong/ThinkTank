@@ -8,12 +8,12 @@
           <view class="gong-gk">文章</view>
         </view>
 					<block wx:for="{{web_artData}}" wx:key="id">
-					<view class="zixun">
+					<view class="zixun"  bindtap="intoPath" data-path="/pages/artDetail/artDetail?id={{item.id}}">
 						<image src="{{item.mainImg[0].url}}" class="zixun-x"></image>
 						<view class="zixun-div">
-							<picker class="picker">{{item.title}}</picker>
-							<picker class="picker-top">{{item.description}}</picker>
-							<picker class="picker-date">{{item.create_time}}</picker>
+							<view class="picker">{{item.title}}</view>
+							<view class="picker-top">{{item.description}}</view>
+							<view class="picker-date">{{item.create_time}}</view>
 						</view>
 					</view>
 				</block>
@@ -32,7 +32,7 @@
                 <view class="lucency">{{item.description}}</view>
               </view>
               <view class="foot-f-div">
-                <picker class="pickerr">{{item.title}}</picker>
+                <view class="pickerr">{{item.title}}</view>
                 <view class="picker-datete">{{item.view_count}}</view>
                 <!-- <view class="picker-hp">人已学习</view> -->
               </view>

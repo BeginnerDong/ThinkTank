@@ -92,7 +92,7 @@
 				<view style="width: 100%;height: 120rpx;"></view>
 				<!-- 设置固定 -->
 				<view class="guding">
-					<view bindtap="intoPathRedirect" data-path="/pages/index/index">
+					<view bindtap="intoIndex" data-path="/pages/index/index">
 						<image src="../../image/coursevoice-icon5.png"></image>
 						<view>返回首页</view>
 					</view>

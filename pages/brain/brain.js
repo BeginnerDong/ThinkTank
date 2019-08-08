@@ -15,12 +15,18 @@ Page({
 		getBefore: {},
 		num: 1,
 		isFirstLoadAllStandard: ['getMainData', 'getArtData','getLabelData'],
+		show:false
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-
+		self.data.now =  Date.parse(new Date())/1000;
+		console.log(self.data.now);
+		self.setData({
+			web_now:self.data.now,
+			web_show:self.data.show
+		});
 		self.data.getBefore = {
 			caseData: {
 				tableName: 'Label',
@@ -61,6 +67,10 @@ Page({
 				self.getMainData(true);
 				self.getArtData();
 			}else if(self.data.num==2){
+				if(self.data.userData.info.level<2){
+					api.showToast('请开通钻石会员','none')
+					return
+				};
 				self.data.getBefore.caseData.searchItem.title = ['=', ['智囊团钻石会员']];
 				self.data.getBeforeTwo.caseData.searchItem.title = ['=', ['超级会员课程']];
 				self.getMainData(true);
@@ -84,6 +94,7 @@ Page({
 		  }
 		  api.checkLoadAll(self.data.isFirstLoadAllStandard,'getMainData',self);
 		  self.setData({
+			  web_show:true,
 		    web_userData:self.data.userData,
 		  });  
 		};

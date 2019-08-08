@@ -24,6 +24,22 @@ Page({
 		wx.setNavigationBarTitle({
 			title: '搜索页'
 		});
+		if(options.type){
+			self.data.getBefore = {
+				caseData: {
+					tableName: 'Label',
+					searchItem: {
+						title: ['=', ['主课程']],
+					},
+					middleKey: 'category_id',
+					key: 'id',
+					condition: 'in',
+				},
+			};
+		};
+		if(options.vipType){
+			self.data.vipType = options.type
+		};
 		self.data.title = options.title;
 		self.getMainData();
 	},
@@ -40,7 +56,12 @@ Page({
 			type: 2,
 			title: ['LIKE', ['%' + self.data.title + '%']]
 		};
-	
+		if(self.data.getBefore){
+			postData.getBefore = self.data.getBefore
+		};
+		if(self.data.vipType=='noVip'){
+			postData.searchItem.category_id = ['not in',[7,15]]
+		};
 		const callback = (res) => {
 			if (res.info.data.length > 0) {
 				self.data.mainData.push.apply(self.data.mainData, res.info.data);

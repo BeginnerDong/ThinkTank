@@ -5,10 +5,14 @@
 			<view class="colour">
 				<!-- 设置图像人物 -->
 				<view class="image">
-					<view style="height: 120rpx;">
-						<image src="{{web_mainData.headImgUrl}}" style="border-radius:50%;width: 120rpx;height: 120rpx;"></image>
+					<view style="display: flex;align-items: center;justify-content: center;">
+						<view style="height: 120rpx;width: 120rpx;border-radius:50%;overflow: hidden;">
+							<open-data type="userAvatarUrl"></open-data>
+							<!-- <image src="{{web_mainData.headImgUrl}}" style="border-radius:50%;width: 120rpx;height: 120rpx;"></image> -->
+						</view>
 					</view>
-					<view class="nic ni">{{web_mainData.nickname}}</view>
+					
+					<view class="nic ni"><open-data type="userNickName"></open-data></view>
 					<view class="nix ni">学号：{{web_mainData.user_no}}</view>
 				</view>
 			</view>
@@ -46,9 +50,9 @@
 			<!-- 设置会员等级 -->
 			<view class="vip">
 				<view class="vip-h">会员等级</view>
-				<view class="vip-z" wx:if="{{web_mainData.info.level==2}}">智囊团钻石会员</view>
-				<view class="vip-z" wx:if="{{web_mainData.info.level==1}}">智囊团会员</view>
-				<view class="vip-z" wx:if="{{web_mainData.info.level==0}}">非会员</view>
+				<view class="vip-z" wx:if="{{web_mainData.info.level==2&&web_mainData.info.deadline>web_now}}">智囊团钻石会员</view>
+				<view class="vip-z" wx:if="{{web_mainData.info.level==1&&web_mainData.info.deadline>web_now}}">智囊团会员</view>
+				<view class="vip-z" wx:if="{{web_mainData.info.level==0||web_mainData.info.deadline<web_now}}">非会员</view>
 			</view>
 			<!-- 设置脚部 -->
 			<view class="navbar">

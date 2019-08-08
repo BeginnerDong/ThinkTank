@@ -29,15 +29,43 @@ Page({
 			phone:'',
 			code:''
 		},
-		isBind:true,
+		isBind:false,
 		isGroup:false
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
+		self.getUserData();
 		self.getMainData();
 		self.getSliderData()
+	},
+	
+	getUserData() {
+		const self = this;
+		var now =  Date.parse(new Date())/1000;
+		const postData = {};
+		postData.tokenFuncName = 'getProjectToken';
+		const callback = (res) => {
+			if (res.solely_code == 100000) {
+				self.data.userData = res.info.data[0]
+				if(self.data.userData.info.phone==''){
+					self.data.isBind = true
+				}
+				if(self.data.userData.info.level>0&&self.data.userData.info.deadline>now){
+					self.data.type='vip'
+				}else{
+					self.data.type='noVip'
+				}
+			} else {
+				api.showToast('网络故障', 'none')
+			}
+		
+			self.setData({
+				web_userData: self.data.userData,
+			});
+		};
+		api.userGet(postData, callback)
 	},
 	
 	close(){
@@ -88,7 +116,7 @@ Page({
 	goSearch(){
 		const self = this;
 		if(self.data.sForm.title!=''){
-			api.pathTo('/pages/search/search?title='+self.data.sForm.title,'nav')
+			api.pathTo('/pages/search/search?title='+self.data.sForm.title+'&vipType='+self.data.type,'nav')
 		}else{
 			api.showToast('请输入名称搜索','none')
 		}
@@ -202,7 +230,7 @@ Page({
 		api.articleGet(postData, callback);
 	},
 	
-		userInfoUpdate() {
+	userInfoUpdate() {
 		const self = this;
 		const postData = {};
 		postData.tokenFuncName = 'getProjectToken';
@@ -210,7 +238,9 @@ Page({
 			postData.refreshToken = true;
 		};
 		postData.data = {};
-		postData.data = api.cloneForm(self.data.sForm);
+		postData.data = {
+			phone:self.data.submitData.phone
+		};
 		postData.smsAuth={
 		   code:self.data.submitData.code,
 		   phone:self.data.submitData.phone

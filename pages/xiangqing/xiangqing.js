@@ -178,6 +178,11 @@ Page({
 		api.pathTo(api.getDataSet(e, 'path'), 'nav');
 	},
 	
+	intoIndex(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'rela');
+	},
+	
 	onReachBottom() {
 		const self = this;
 		if (!self.data.isLoadAll && self.data.buttonCanClick) {
