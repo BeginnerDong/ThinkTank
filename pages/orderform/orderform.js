@@ -157,11 +157,7 @@ Page({
 	pay(order_id) {
 		const self = this;
 		var order_id = self.data.order_id;
-		const postData = {
-			wxPay: {
-				price: self.data.mainData.price
-			}
-		};
+		const postData = self.data.pay;
 		postData.tokenFuncName = 'getProjectToken';
 		postData.searchItem = {
 			id: order_id

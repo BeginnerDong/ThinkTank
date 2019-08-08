@@ -30,9 +30,9 @@
 				<view class="sp-two" style="color: rgb(255,59,59);">￥{{web_pay.wxPay.price}}</view>
 			</view>
 			<!-- 设置提交 -->
-			<view class="submit" bindtap="{{web_buttonCanClick?'submit':''}}">
+			<button class="submit" open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}">
 				提交
-			</view>
+			</button>
 		</view>
 	</view>
 </view>
