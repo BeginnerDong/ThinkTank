@@ -14,7 +14,7 @@ Page({
 		mainData: [],
 		getBefore: {},
 		num: 1,
-		isFirstLoadAllStandard: ['getMainData', 'getArtData','getLabelData'],
+		isFirstLoadAllStandard: ['getMainData', 'getArtData','getLabelData','getUserData'],
 		show:false
 	},
 
@@ -92,7 +92,7 @@ Page({
 		  }else{
 		    api.showToast('网络故障','none')
 		  }
-		  api.checkLoadAll(self.data.isFirstLoadAllStandard,'getMainData',self);
+		  api.checkLoadAll(self.data.isFirstLoadAllStandard,'getUserData',self);
 		  self.setData({
 			  web_show:true,
 		    web_userData:self.data.userData,

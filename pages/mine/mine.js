@@ -13,7 +13,7 @@ Page({
 
 		mainData: [],
 		searchItem: {},
-		isFirstLoadAllStandard: ['getMainData'],
+		isFirstLoadAllStandard: ['getMainData','getBackgroundImg'],
 	},
 
 
@@ -25,11 +25,13 @@ Page({
 		self.setData({
 			web_now:self.data.now
 		})
+		self.getBackgroundImg()
 	},
 	
 	onShow(){
 		const self = this;
-		self.getMainData()
+		self.getMainData();
+		
 	},
 	
 	getMainData(){
@@ -50,7 +52,25 @@ Page({
 		api.userGet(postData,callback)
 	},
 
-
+	getBackgroundImg(){
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			title:'背景图'
+		};
+		const callback = (res)=>{
+		  if(res.solely_code==100000){
+		    self.data.imgData = res.info.data[0]
+		  }else{
+		    api.showToast('网络故障','none')
+		  }
+		  api.checkLoadAll(self.data.isFirstLoadAllStandard,'getBackgroundImg',self);
+		  self.setData({
+		    web_imgData:self.data.imgData,
+		  });  
+		};
+		api.labelGet(postData,callback)
+	},
 
 	intoPath(e) {
 		const self = this;
