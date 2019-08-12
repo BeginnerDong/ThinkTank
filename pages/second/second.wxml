@@ -12,10 +12,9 @@
 						<view class="rmb">{{item.price}}元</view>
 						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="续期" 
 						wx:if="{{web_userData.info.level==item.level&&web_userData.info.deadline>web_now}}">续期</view>
+					
 						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="开通" 
-						wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==2&&web_userData.info.deadline<web_now}}">开通</view>
-						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="开通" 
-						wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==0&&web_userData.info.deadline<web_now}}">开通</view>
+						wx:if="{{web_userData.info.deadline<web_now}}">开通</view>
 						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="升级" 
 						wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==1&&web_userData.info.deadline>web_now}}">升级</view>
 					</view>
