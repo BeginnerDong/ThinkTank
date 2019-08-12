@@ -100,7 +100,7 @@
 						<image src="{{web_isInCollectData?'../../image/coursevoice-icon6a.png':'../../image/coursevoice-icon6.png'}}"></image>
 						<view>收藏</view>
 					</view>
-					<view>开始学习</view>
+					<view bindtap="start">开始学习</view>
 				</view>
 			</view>
 		</view>

@@ -67,6 +67,18 @@ Page({
 			})
 		}
 	},
+	
+	start(e) {
+		const self = this;
+		
+		self.data.currentData = 1;
+		self.setData({
+			currentData: self.data.currentData
+		})
+		
+	},
+	
+	
 
 	getMainData() {
 		const self = this;

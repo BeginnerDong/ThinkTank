@@ -38,7 +38,7 @@ Page({
 			};
 		};
 		if(options.vipType){
-			self.data.vipType = options.type
+			self.data.vipType = options.vipType
 		};
 		self.data.title = options.title;
 		self.getMainData();

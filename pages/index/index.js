@@ -19,7 +19,7 @@ Page({
 		previousMargin: 0,
 		nextMargin: 0,
 		mainData: [],
-		isFirstLoadAllStandard: ['getMainData', 'getSliderData'],
+		isFirstLoadAllStandard: ['getMainData', 'getSliderData','getQrData'],
 		sForm:{
 			title:''
 		},
@@ -38,12 +38,14 @@ Page({
 		api.commonInit(self);
 		self.getUserData();
 		self.getMainData();
-		self.getSliderData()
+		self.getSliderData();
+		self.getQrData()
 	},
 	
 	getUserData() {
 		const self = this;
 		var now =  Date.parse(new Date())/1000;
+		console.log(now)
 		const postData = {};
 		postData.tokenFuncName = 'getProjectToken';
 		const callback = (res) => {
@@ -62,6 +64,7 @@ Page({
 			}
 		
 			self.setData({
+				isBind:self.data.isBind,
 				web_userData: self.data.userData,
 			});
 		};
@@ -122,7 +125,23 @@ Page({
 		}
 	},
 	
-	
+	getQrData() {
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			title: '首页二维码'
+		};
+		const callback = (res) => {
+			if (res.info.data.length > 0) {
+				self.data.qrData = res.info.data[0]
+			}
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getQrData', self);
+			self.setData({
+				web_qrData: self.data.qrData,
+			});
+		};
+		api.labelGet(postData, callback);
+	},
 
 	getSliderData() {
 		const self = this;

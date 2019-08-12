@@ -18,8 +18,12 @@ Page({
 
 	onLoad(options) {
 		const self = this;
+		var now =  Date.parse(new Date())/1000;
 		api.commonInit(self);
 		self.getMainData();
+		self.setData({
+			web_now:now
+		})
 	},
 	
 	onShow() {

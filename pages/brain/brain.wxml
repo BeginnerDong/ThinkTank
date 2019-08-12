@@ -67,7 +67,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="pr" wx:if="{{num==2&&(web_userData.info.level!=2||web_userData.info.deadline<web_now)}}">
+			<view class="pr" wx:if="{{num==2&&web_userData.info.level!=2&&web_userData.info.deadline<web_now}}">
 				<image src="{{web_labelData.mainImg[1].url}}" class="nanshi"></image>
 				<view class="link">
 					<view class="ll">会员链接:http://hao.360.com/</view>

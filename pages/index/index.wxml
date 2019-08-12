@@ -2,7 +2,7 @@
 	<view class="acti">
 		<view class="acti-top">
 			<!-- 设置头部 -->
-			<view class="top-name">
+			<!-- <view class="top-name">
 			
 			<view class="top-name-top">	
 			<view class="tubiao"></view>
@@ -10,10 +10,10 @@
 			<view class="zhi">智囊团慧课堂开学啦，学习股价分析</view>
 			<view class="zhuce"  bindtap="intoPath" data-path="/pages/second/second">注册会员</view>
 			</view>
-			</view>
+			</view> -->
 			<!-- 设置div -->
 			
-			<swiper style="width: 100%;height: 380rpx;margin-top:106rpx;"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+			<swiper style="width: 100%;height: 380rpx;"  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
 			 interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
 			
 				<block wx:for="{{web_sliderData.mainImg}}" wx:index="{{index}}">
@@ -85,7 +85,7 @@
 			</view>
 			<view style="width: 80%;height: 60%;position: fixed;top:20%;left:10%;background: #fff;z-index:1002;border-radius: 20rpx;" wx:if="{{isGroup}}">
 				<view style="height: 60%;width: 100%;display: flex;align-items: center;justify-content: center;">
-					<image src="../../image/coupons-icon2.png" style="height: 280rpx;width: 280rpx;"></image>
+					<image src="{{web_qrData.mainImg[0].url}}" style="height: 280rpx;width: 280rpx;"></image>
 				</view>
 				<view style="font-size: 15px;color: rgb(102,102,102);width: 100%;text-align: center;">长按二维码，加入交流群</view>
 				

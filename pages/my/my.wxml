@@ -31,7 +31,7 @@
 								<view class="tit">优惠券</view>
 								<view class="data">{{item.create_time}}-{{item.invalid_time}}</view>
 							</view>
-							<view class="takeBtn">立即使用</view>
+							<view class="takeBtn" data-path="/pages/second/second" bindtap="intoPathRedirect">立即使用</view>
 						</view>
 					</view>
 					<view class='swiper_con' wx:if="{{currentData == 2}}">

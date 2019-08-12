@@ -67,10 +67,10 @@ Page({
 				self.getMainData(true);
 				self.getArtData();
 			}else if(self.data.num==2){
-				if(self.data.userData.info.level<2){
+				/* if(self.data.userData.info.level<2){
 					api.showToast('请开通钻石会员','none')
 					return
-				};
+				}; */
 				self.data.getBefore.caseData.searchItem.title = ['=', ['智囊团钻石会员']];
 				self.data.getBeforeTwo.caseData.searchItem.title = ['=', ['超级会员课程']];
 				self.getMainData(true);

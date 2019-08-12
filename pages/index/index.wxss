@@ -63,7 +63,7 @@ a{
 /* 设置搜索框 */
 .search{
 	position: absolute;
-	top: 450rpx;
+	top: 350rpx;
 	z-index: 200;
 	width: 100%;
 	height: 70rpx;
