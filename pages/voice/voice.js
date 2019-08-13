@@ -75,7 +75,9 @@ Page({
         	innerAudioContext.src = path;
         	innerAudioContext.play();
         	setTimeout(function(){
+        		console.log(111)
         		innerAudioContext.duration;
+        		innerAudioContext.currentTime;
         		innerAudioContext.onTimeUpdate(() => {
         			
         			var nowSeconds = Math.floor(innerAudioContext.currentTime);
@@ -168,9 +170,15 @@ Page({
 								var testaudi = wx.createInnerAudioContext();
 								testaudi.src = self.data.mainData[e].bannerImg[0].url;
 								testaudi.onCanplay(() => {
-						      		testaudi.duration //类似初始化-必须触发-不触发此函数延时也获取不到
+						      		testaudi.duration; //类似初始化-必须触发-不触发此函数延时也获取不到
+						      		testaudi.currentTime; //类似初始化-必须触发-不触发此函数延时也获取不到
 							      	setTimeout(function () {
-								      self.data.mainData[e].o_duration = self.calDuration(parseInt(testaudi.duration));
+										if(testaudi.duration){
+											self.data.mainData[e].o_duration = self.calDuration(parseInt(testaudi.duration));
+										}else{
+											self.data.mainData[e].o_duration = self.data.mainData[e].description;
+										};
+								      	
 										console.log('testaudi.duration',testaudi.duration)
 										self.setData({
 											web_mainData:self.data.mainData

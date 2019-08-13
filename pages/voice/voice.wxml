@@ -16,7 +16,7 @@
 						<!-- 设置左部内容 -->
 						<view class="content-one"  >
 							<view><image src="{{item.mainImg[0].url}}" style="border-radius: 50%;"></image></view>
-							<view>222</view>
+							
 						</view>
 						<!-- 设置中间内容 -->
 						<view class="content-two">

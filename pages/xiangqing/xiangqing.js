@@ -26,13 +26,15 @@ Page({
 			thirdapp_id: 2
 		},
 		isInCollectData: false,
-		messageData:[]
+		messageData:[],
+		videoContextPrev:null,
+		videoPath:''
 	},
 
 	onLoad(options) {
 		const self = this;
 		api.commonInit(self);
-
+		self.data.videoContextPrev = wx.createVideoContext('myVedio');
 		self.data.id = options.id;
 		var collectData = api.getStorageArray('collectData');
 		self.data.isInCollectData = api.findItemInArray(collectData, 'id', self.data.id);
@@ -159,18 +161,22 @@ Page({
 		const self = this;
 	
 		var videoId = api.getDataSet(e,'id');
-		console.log(videoId)
-		if (videoId && self.data.playId != videoId) {
-			if (self.data.playId) {
-				var videoContextPrev = wx.createVideoContext(self.data.playId)
+		var videoPath = api.getDataSet(e,'path');
+		self.data.videoPath = videoPath;
+		console.log('videoId',videoId)
+		if (videoId) {
+			/*if (self.data.playId) {
+				
 				videoContextPrev.pause();
-			};
-			self.data.playId = videoId;
-			var videoContextNext = wx.createVideoContext(self.data.playId)
-			console.log(videoContextNext)
-			videoContextNext.play();
+			}else{
+				self.data.playId = videoId;
+				var videoContextNext = wx.createVideoContext(self.data.playId)
+			};self.data.videoContextPrev = wx.createVideoContext('myVedio')*/
+			
+			console.log('self.data.videoContextPrev',self.data.videoContextPrev)
+			self.data.videoContextPrev.play();
 			self.setData({
-				web_playId: self.data.playId
+				web_videoPath: self.data.videoPath
 			})
 		};
 	
