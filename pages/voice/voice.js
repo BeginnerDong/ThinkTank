@@ -53,6 +53,11 @@ Page({
 
 	},
 
+	onUnload(){
+		const self = this;
+		innerAudioContext.destroy()
+	},
+
 	play(e){
 
 		const self = this;
