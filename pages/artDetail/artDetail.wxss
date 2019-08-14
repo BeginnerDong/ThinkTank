@@ -1,4 +1,5 @@
 /* pages/helpCenterDetails/helpCenterDetails.wxss */
+
 .helpCenterDetails-container{
  font-size:PingFang-SC-Medium;
  width:100%;
@@ -10,25 +11,36 @@
  padding:0 6.5%;
 }
 .big-title{
-  font-size:13px;
+  font-size:32rpx;
   color:#000000;
-  margin:15px 0px 0px 0px;
+  margin:30rpx 3% 0px 3%;
+  line-height: 48rpx;
   text-align:center;
+  font-weight: bold;
+}
+.text-content .wxParse-p image{ 
+  width: 100%;
+  display: block;
+  margin: 20rpx auto;
 }
 .big-text-content{
-  font-size:12px;
-  color:#9E9E9E;
+  font-size:28rpx;
+  line-height: 48rpx;
+  color:#333;
   width:100%;
 }
+.text-content .ql-editor{ 
+  line-height: 48rpx;
+}
 .text-content .title{
-  margin-top:15px;
+  margin-top:30rpx;
 }
 .text{
-  margin-top:15px;
-  line-height:20px;
+  margin-top:30rpx;
+  line-height:44rpx;
 }
 .second-text{
-  margin-top:15px;
-  line-height:20px;
+  margin-top:30rpx;
+  line-height:40rpx;
 }
 @import "../../wxParse/wxParse.wxss";
