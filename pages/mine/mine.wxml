@@ -21,7 +21,7 @@
 	</view>
 	<!-- 设置内容 -->
 	<view class="set">
-		<view class="one" bindtap="intoPath" data-path="/pages/second/second">
+		<view class="one" bindtap="intoPath" data-path="/pages/second/second" wx:if="{{web_qrData.description!=1&&web_showBuy}}">
 			<view class="one-q">
 				<image src="../../image/about-icon1.png" class="g"></image>
 			</view>
@@ -51,7 +51,7 @@
 		</view>
 	</view>
 	<!-- 设置会员等级 -->
-	<view class="vip">
+	<view class="vip" wx:if="{{web_qrData.description!=1&&web_showBuy}}">
 		<view class="vip-h">会员等级</view>
 		<view class="vip-z" wx:if="{{web_mainData.info.level==2&&web_mainData.info.deadline>web_now}}">智囊团钻石会员</view>
 		<view class="vip-z" wx:if="{{web_mainData.info.level==1&&web_mainData.info.deadline>web_now}}">智囊团会员</view>

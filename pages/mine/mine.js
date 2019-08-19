@@ -10,10 +10,10 @@ const token = new Token();
 
 Page({
 	data: {
-
+		showBuy:false,
 		mainData: [],
 		searchItem: {},
-		isFirstLoadAllStandard: ['getMainData','getBackgroundImg'],
+		isFirstLoadAllStandard: ['getMainData','getBackgroundImg','getQrData'],
 	},
 
 
@@ -23,15 +23,38 @@ Page({
 		self.data.now =  Date.parse(new Date())/1000;
 		console.log(self.data.now);
 		self.setData({
+			web_showBuy:self.data.showBuy,
 			web_now:self.data.now
 		})
-		self.getBackgroundImg()
+		self.getQrData()
+		self.getBackgroundImg();
+		
 	},
 	
 	onShow(){
 		const self = this;
 		self.getMainData();
 		
+	},
+	
+	
+	getQrData() {
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			title: '首页二维码'
+		};
+		const callback = (res) => {
+			if (res.info.data.length > 0) {
+				self.data.qrData = res.info.data[0]
+			}
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getQrData', self);
+			self.setData({
+				web_showBuy:true,
+				web_qrData: self.data.qrData,
+			});
+		};
+		api.labelGet(postData, callback);
 	},
 	
 	getMainData(){

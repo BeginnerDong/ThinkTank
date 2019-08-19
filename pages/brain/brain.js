@@ -14,7 +14,7 @@ Page({
 		mainData: [],
 		getBefore: {},
 		num: 1,
-		isFirstLoadAllStandard: ['getMainData', 'getArtData','getLabelData','getUserData'],
+		isFirstLoadAllStandard: ['getMainData', 'getArtData','getLabelData','getUserData','getQrData'],
 		show:false
 	},
 
@@ -52,7 +52,8 @@ Page({
 		self.getMainData();
 		self.getArtData();
 		self.getUserData();
-		self.getLabelData()
+		self.getLabelData();
+		self.getQrData()
 	},
 	
 	changeType(e){
@@ -80,6 +81,24 @@ Page({
 				num:self.data.num
 			})
 		}
+	},
+	
+	getQrData() {
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			title: '首页二维码'
+		};
+		const callback = (res) => {
+			if (res.info.data.length > 0) {
+				self.data.qrData = res.info.data[0]
+			}
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getQrData', self);
+			self.setData({
+				web_qrData: self.data.qrData,
+			});
+		};
+		api.labelGet(postData, callback);
 	},
 	
 	getUserData(){
