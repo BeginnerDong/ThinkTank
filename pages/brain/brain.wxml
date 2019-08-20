@@ -12,7 +12,7 @@
 			</view>
 			<!-- 设置大图片 -->
 			<view class="pr" wx:if="{{num==1&&(web_userData.info.level==0||web_userData.info.deadline<web_now)}}">
-				<image src="{{web_labelData.mainImg[0].url}}" class="nanshi"></image>
+				<image src="{{web_labelData.mainImg[0].url}}" class="nanshi"  style="height:{{web_height-200}}rpx"></image>
 				<view class="link" wx:if="{{web_qrData.description!=1}}">
 					<view class="ll">会员链接:http://hao.360.com/</view>
 					<view class="goumai" bindtap="intoPath" data-path="/pages/second/second">购买会员</view>

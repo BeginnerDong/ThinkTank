@@ -54,7 +54,7 @@
         </view>
 				<!-- 设置图片 -->
 				<view class="" >
-					<image src="../../image/home-img1.png" class="tupian"></image>
+					<image src="{{web_posterData.mainImg[0].url}}" class="tupian"></image>
 				</view>
 			</view>
 			<!-- 设置交流群 -->

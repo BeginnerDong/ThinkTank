@@ -22,7 +22,18 @@ Page({
 		const self = this;
 		api.commonInit(self);
 		self.data.now =  Date.parse(new Date())/1000;
-		console.log(self.data.now);
+		console.log(self.data.now);	
+		wx.getSystemInfo({
+		  success: function (res) {
+		    let clientHeight = res.windowHeight;
+		    let clientWidth = res.windowWidth;
+		    let ratio = 750 / clientWidth;
+		    let height = clientHeight * ratio;
+		    self.setData({
+		      web_height: height
+		    });
+		  }
+		});
 		self.setData({
 			web_now:self.data.now,
 			web_show:self.data.show

@@ -17,6 +17,7 @@
 						wx:if="{{web_userData.info.deadline<web_now}}">开通</view>
 						<view class="kait"  bindtap="nextPage" data-index="{{index}}" data-type="升级" 
 						wx:if="{{web_userData.info.level!=item.level&&web_userData.info.level==1&&web_userData.info.deadline>web_now}}">升级</view>
+						
 					</view>
 				
 				</view>

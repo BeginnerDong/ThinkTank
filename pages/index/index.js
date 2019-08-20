@@ -19,7 +19,7 @@ Page({
 		previousMargin: 0,
 		nextMargin: 0,
 		mainData: [],
-		isFirstLoadAllStandard: ['getMainData', 'getSliderData','getQrData'],
+		isFirstLoadAllStandard: ['getMainData', 'getSliderData','getQrData','getPosterData'],
 		sForm:{
 			title:''
 		},
@@ -39,7 +39,8 @@ Page({
 		self.getUserData();
 		self.getMainData();
 		self.getSliderData();
-		self.getQrData()
+		self.getQrData();
+		self.getPosterData()
 	},
 	
 	getUserData() {
@@ -138,6 +139,24 @@ Page({
 			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getQrData', self);
 			self.setData({
 				web_qrData: self.data.qrData,
+			});
+		};
+		api.labelGet(postData, callback);
+	},
+	
+	getPosterData() {
+		const self = this;
+		const postData = {};
+		postData.searchItem = {
+			title: '首页公开课程'
+		};
+		const callback = (res) => {
+			if (res.info.data.length > 0) {
+				self.data.posterData = res.info.data[0]
+			}
+			api.checkLoadAll(self.data.isFirstLoadAllStandard, 'getPosterData', self);
+			self.setData({
+				web_posterData: self.data.posterData,
 			});
 		};
 		api.labelGet(postData, callback);
