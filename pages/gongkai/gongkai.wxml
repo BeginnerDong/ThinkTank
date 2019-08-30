@@ -1,12 +1,12 @@
 <view>
-	<view style="display: flex;flex-wrap: wrap;">
-		<view class="card" wx:for="{{web_mainData}}" style="position: relative;" wx:key="id" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
+	<view style="display: flex;flex-wrap: wrap;   justify-content: space-between;padding:0 3%">
+		<view class="card" wx:for="{{web_mainData}}" wx:key="id" bindtap="intoPath" data-path="/pages/xiangqing/xiangqing?id={{item.id}}">
 			<image src="{{item.mainImg[0].url}}" class="foot-f-x"></image>
-			<view class="lucency">
+			<view class="lucency avoidOverflow">
 				{{item.description}}
 			</view>
-			<view style="width: 100%;padding: 0 15px;">
-				<view class="pickerr">{{item.title}}</view>
+			<view>
+				<view class="pickerr avoidOverflow">{{item.title}}</view>
 				<view class="picker-datete">{{item.view_count}}<span style="font-size:12px;color: #a1a1a1;">人已学习</span></view>
 			</view>
 		</view>
