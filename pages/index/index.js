@@ -52,9 +52,9 @@ Page({
 		const callback = (res) => {
 			if (res.solely_code == 100000) {
 				self.data.userData = res.info.data[0]
-				if(self.data.userData.info.phone==''){
+				/* if(self.data.userData.info.phone==''){
 					self.data.isBind = true
-				}
+				} */
 				if(self.data.userData.info.level>0&&self.data.userData.info.deadline>now){
 					self.data.type='vip'
 				}else{

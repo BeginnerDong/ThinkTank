@@ -25,7 +25,7 @@
 			<view class="one-q">
 				<image src="../../image/about-icon1.png" class="g"></image>
 			</view>
-			<view class="hui">购买会员</view>
+			<view class="hui">加入会员</view>
 			<image src="../../image/thearrow-icon.png" class="l"></image>
 		</view>
 		<view class="one" data-path="/pages/foot/foot" bindtap="intoPath">

@@ -99,7 +99,7 @@ Page({
 					api.pathTo('/pages/mine/mine','rela')
 				}, 1000);
 			} else {
-				api.showToast(res.msg, 'none')
+				api.showToast(data.msg, 'none')
 			};
 		};
 		api.qrCodeUpdate(postData, callback);
